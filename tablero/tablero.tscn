@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/boton-salir-hover.png" type="Texture" id=10]
 [ext_resource path="res://assets/diseño-tablero.png" type="Texture" id=11]
 
-[node name="Node2D" type="Node2D"]
+[node name="tablero" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 574.0, 98.0, 501.0, 519.0 ],
 "_edit_vertical_guides_": [ 702.0, 948.0, 825.0 ]
