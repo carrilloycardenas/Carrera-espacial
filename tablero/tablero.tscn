@@ -13,10 +13,6 @@
 [ext_resource path="res://assets/diseño-tablero.png" type="Texture" id=11]
 
 [node name="tablero" type="Node2D"]
-__meta__ = {
-"_edit_horizontal_guides_": [ 551.0, 481.0, 499.0, 30.0, 71.0, 28.0, 75.0 ],
-"_edit_vertical_guides_": [ 843.0, 799.0, 858.0, 901.0, 918.0, 960.0 ]
-}
 
 [node name="Tablero" type="Sprite" parent="."]
 position = Vector2( 512, 288 )
