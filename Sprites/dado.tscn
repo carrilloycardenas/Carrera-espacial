@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Dado-3.png" type="Texture" id=1]
+[ext_resource path="res://assets/Dado-4.png" type="Texture" id=2]
+[ext_resource path="res://assets/Dado-5.png" type="Texture" id=3]
+[ext_resource path="res://assets/Dado-6.png" type="Texture" id=4]
+[ext_resource path="res://assets/Dado-2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Dado-1.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "dado",
+"speed": 5.0
+} ]
+
+[node name="spriteDado" type="Node2D"]
+
+[node name="dado" type="AnimatedSprite" parent="."]
+position = Vector2( -3.08752e-05, -3.17097e-05 )
+scale = Vector2( 3.48052, 3.48052 )
+frames = SubResource( 1 )
+animation = "dado"
+frame = 5

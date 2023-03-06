@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -12,8 +12,16 @@
 [ext_resource path="res://assets/boton-salir-hover.png" type="Texture" id=10]
 [ext_resource path="res://assets/diseño-tablero.png" type="Texture" id=11]
 [ext_resource path="res://assets/astronauta-1-rosa.png" type="Texture" id=12]
+[ext_resource path="res://font/FredokaOne-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Sprites/dado.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scripts/tablero.gd" type="Script" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 13 )
 
 [node name="tablero" type="Node2D"]
+script = ExtResource( 15 )
 
 [node name="Tablero" type="Sprite" parent="."]
 position = Vector2( 512, 288 )
@@ -24,6 +32,18 @@ texture = ExtResource( 1 )
 position = Vector2( 825.008, 287.5 )
 scale = Vector2( 0.533657, 0.533057 )
 texture = ExtResource( 2 )
+
+[node name="spriteDado" parent="Fondo-espacio-dado" instance=ExtResource( 14 )]
+position = Vector2( 1.85864, -197.915 )
+scale = Vector2( 0.42342, 0.423897 )
+
+[node name="Label" type="Label" parent="Fondo-espacio-dado"]
+margin_left = -76.8433
+margin_top = -4.69031
+margin_right = 109.157
+margin_bottom = 54.3097
+custom_fonts/font = SubResource( 1 )
+text = "Player 1"
 
 [node name="btn-tirar" type="TextureButton" parent="."]
 margin_left = 730.0
@@ -72,6 +92,7 @@ scale = Vector2( 0.533333, 0.533334 )
 texture = ExtResource( 11 )
 
 [node name="Astronauta-1-rosa" type="Sprite" parent="."]
-position = Vector2( 543, 507 )
-scale = Vector2( 0.168804, 0.168804 )
+position = Vector2( 546, 508 )
+scale = Vector2( 0.225961, 0.225961 )
 texture = ExtResource( 12 )
+offset = Vector2( -0.000244141, 0.000244141 )
