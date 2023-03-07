@@ -18,8 +18,8 @@ animations = [ {
 [node name="spriteDado" type="Node2D"]
 
 [node name="dado" type="AnimatedSprite" parent="."]
-position = Vector2( -3.08752e-05, -3.17097e-05 )
-scale = Vector2( 3.48052, 3.48052 )
+position = Vector2( -1.91331e-05, -1.91331e-05 )
+scale = Vector2( 2.85714, 2.85714 )
 frames = SubResource( 1 )
 animation = "dado"
-frame = 5
+frame = 3
