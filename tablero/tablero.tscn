@@ -141,4 +141,4 @@ scale = Vector2( 0.533333, 0.533334 )
 texture = ExtResource( 11 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 576, 552 )
+position = Vector2( 576, 550 )
