@@ -17,13 +17,14 @@
 [ext_resource path="res://scripts/tablero.gd" type="Script" id=15]
 
 [sub_resource type="DynamicFont" id=1]
-size = 48
+size = 37
 font_data = ExtResource( 13 )
 
 [node name="tablero" type="Node2D"]
 script = ExtResource( 15 )
 __meta__ = {
-"_edit_vertical_guides_": [ 825.0 ]
+"_edit_horizontal_guides_": [ 236.0, 154.0, 282.0 ],
+"_edit_vertical_guides_": [ 779.0, 753.0, 939.0 ]
 }
 
 [node name="Tablero" type="Sprite" parent="."]
@@ -37,44 +38,40 @@ scale = Vector2( 0.533657, 0.533057 )
 texture = ExtResource( 2 )
 
 [node name="spriteDado" parent="Fondo-espacio-dado" instance=ExtResource( 14 )]
-position = Vector2( -0.0152588, -197.915 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 7.48047, -173.527 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="lbl-player1" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -185.748
-margin_top = -40.6434
-margin_right = 187.252
-margin_bottom = 18.3566
+margin_left = -77.0
+margin_top = -40.0
+margin_right = 213.0
+margin_bottom = 19.0
 custom_fonts/font = SubResource( 1 )
 text = "Player 1"
-align = 1
 
 [node name="lbl-player2" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -185.748
-margin_top = 34.3957
-margin_right = 187.252
-margin_bottom = 93.3957
+margin_left = -77.0
+margin_top = 35.0
+margin_right = 213.0
+margin_bottom = 94.0
 custom_fonts/font = SubResource( 1 )
 text = "Player 2"
-align = 1
 
 [node name="lbl-player3" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -185.748
-margin_top = 107.559
-margin_right = 187.252
-margin_bottom = 166.559
+margin_left = -77.0
+margin_top = 108.0
+margin_right = 213.0
+margin_bottom = 167.0
 custom_fonts/font = SubResource( 1 )
 text = "Player 3"
-align = 1
 
 [node name="lbl-player4" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -185.748
-margin_top = 178.845
-margin_right = 187.252
-margin_bottom = 237.845
+margin_left = -77.0
+margin_top = 179.0
+margin_right = 213.0
+margin_bottom = 238.0
 custom_fonts/font = SubResource( 1 )
 text = "Player 4"
-align = 1
 
 [node name="btn-tirar" type="TextureButton" parent="."]
 margin_left = 730.0
@@ -122,8 +119,14 @@ position = Vector2( 512, 288 )
 scale = Vector2( 0.533333, 0.533334 )
 texture = ExtResource( 11 )
 
-[node name="Astronauta-1-rosa" type="Sprite" parent="."]
+[node name="astro1-rosa" type="Sprite" parent="."]
+visible = false
 position = Vector2( 546, 508 )
 scale = Vector2( 0.225961, 0.225961 )
 texture = ExtResource( 12 )
 offset = Vector2( -0.000244141, 0.000244141 )
+
+[node name="Astronauta-1-rosa" type="Sprite" parent="."]
+position = Vector2( 766.188, 281.274 )
+scale = Vector2( 0.219017, 0.219017 )
+texture = ExtResource( 12 )
