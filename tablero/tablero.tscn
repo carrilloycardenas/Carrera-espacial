@@ -141,10 +141,4 @@ scale = Vector2( 0.533333, 0.533334 )
 texture = ExtResource( 11 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 552, 296 )
-
-[node name="astro1-rosa" type="Sprite" parent="."]
-position = Vector2( 544, 508 )
-scale = Vector2( 0.256876, 0.256876 )
-texture = ExtResource( 12 )
-offset = Vector2( -0.000244141, 0.000244141 )
+position = Vector2( 576, 552 )
