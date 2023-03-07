@@ -62,34 +62,34 @@ position = Vector2( 7.48047, -173.527 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="lbl-player1" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -50.6307
-margin_top = -38.124
-margin_right = 223.369
-margin_bottom = 7.87598
+margin_left = -51.0
+margin_top = -38.0
+margin_right = 187.0
+margin_bottom = 8.0
 custom_fonts/font = SubResource( 1 )
 text = "Mariana"
 
 [node name="lbl-player2" type="Label" parent="Fondo-espacio-dado"]
 margin_left = -51.0
 margin_top = 52.0
-margin_right = 221.0
+margin_right = 185.0
 margin_bottom = 98.0
 custom_fonts/font = SubResource( 1 )
 text = "Dianita"
 
 [node name="lbl-player3" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -48.7355
-margin_top = 139.76
-margin_right = 225.265
-margin_bottom = 185.76
+margin_left = -49.0
+margin_top = 140.0
+margin_right = 185.0
+margin_bottom = 186.0
 custom_fonts/font = SubResource( 1 )
 text = "Luisito"
 
 [node name="lbl-player4" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -48.7568
-margin_top = 224.023
-margin_right = 225.243
-margin_bottom = 270.023
+margin_left = -49.0
+margin_top = 224.0
+margin_right = 185.0
+margin_bottom = 270.0
 custom_fonts/font = SubResource( 1 )
 text = "Paulette"
 
