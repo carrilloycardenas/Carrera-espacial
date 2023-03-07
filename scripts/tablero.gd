@@ -16,3 +16,12 @@ func _ready():
 	get_node("Fondo-espacio-dado/lbl-player3").visible = false
 	get_node("Fondo-espacio-dado/lbl-player4").visible = false
 	
+
+
+
+func _on_CheckButton_pressed():
+	OS.window_fullscreen = !OS.window_fullscreen
+
+
+func _on_btnsalir_pressed():
+	get_tree().quit()
