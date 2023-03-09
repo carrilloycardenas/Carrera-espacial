@@ -24,4 +24,12 @@ func _on_CheckButton_pressed():
 
 
 func _on_btnsalir_pressed():
+	get_node("Hover-seleccionjugadores").visible = true
+
+
+func _on_TextureButton_pressed():
 	get_tree().quit()
+
+
+func _on_btnregresar_pressed():
+	get_node("Hover-seleccionjugadores").visible = false

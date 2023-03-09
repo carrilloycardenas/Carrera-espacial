@@ -16,5 +16,7 @@ animations = [ {
 [node name="astro" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 1 )
-frame = 7
+frame = 5
+playing = true
