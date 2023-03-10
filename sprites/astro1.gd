@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 # Declare member variables here. Examples:
@@ -10,16 +10,16 @@ var currPos = [579,546]
 func _input(event):
 	if event.is_action_pressed("ui_right"):
 		currPos[0] += 48.5
-		#get_node("Sprite").look_at(self.position + Vector2(1,0))
+		#get_node("Sprite2D").look_at(self.position + Vector2(1,0))
 	elif event.is_action_pressed("ui_left"):
 		currPos[0] -= 48.5
-		#get_node("Sprite").look_at(self.position + Vector2(-1,0))
+		#get_node("Sprite2D").look_at(self.position + Vector2(-1,0))
 	elif event.is_action_pressed("ui_up"):
 		currPos[1] -= 48.5
-		#get_node("Sprite").look_at(self.position + Vector2(0,-1))
+		#get_node("Sprite2D").look_at(self.position + Vector2(0,-1))
 	elif event.is_action_pressed("ui_down"):
 		currPos[1] += 48.5
-		#get_node("Sprite").look_at(self.position + Vector2(0,1))
+		#get_node("Sprite2D").look_at(self.position + Vector2(0,1))
 		
 	self.position = Vector2(currPos[0], currPos[1])
 
