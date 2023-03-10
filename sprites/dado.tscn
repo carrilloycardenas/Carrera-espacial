@@ -12,7 +12,7 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "dado",
-"speed": 5.0
+"speed": 10.0
 } ]
 
 [node name="spriteDado" type="Node2D"]
