@@ -5,6 +5,7 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 var currPos = [579,546]
+var dice = 0
 
 # Called when the node enters the scene tree for the first time.
 func _input(event):
@@ -22,6 +23,7 @@ func _input(event):
 		#get_node("Sprite2D").look_at(self.position + Vector2(0,1))
 		
 	self.position = Vector2(currPos[0], currPos[1])
+	print(currPos)
 
 func avanzar(dado):
 	currPos[0] -= (48.5*dado)
