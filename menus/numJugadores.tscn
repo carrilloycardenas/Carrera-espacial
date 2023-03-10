@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/FONDO ANIMADO/fondo-piedras.png" type="Texture" id=5]
+[ext_resource path="res://assets/FONDO ANIMADO/fondo-piedras.png" type="Texture2D" id=5]
 [ext_resource path="res://scripts/paralaxOnMenus.gd" type="Script" id=10]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
@@ -11,7 +11,7 @@ position = Vector2( 1, 0 )
 scale = Vector2( 0.487111, 0.487111 )
 motion_mirroring = Vector2( 3840, 0 )
 
-[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2( 3101.96, 1135.26 )
 scale = Vector2( 0.985401, 0.985401 )
 texture = ExtResource( 5 )
