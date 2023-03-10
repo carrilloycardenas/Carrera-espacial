@@ -1,15 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://font/FredokaOne-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/cantidad-jugador-4.png" type="Texture" id=2]
-[ext_resource path="res://assets/cantidad-jugador-3.png" type="Texture" id=3]
-[ext_resource path="res://assets/cantidad-jugador-1.png" type="Texture" id=4]
-[ext_resource path="res://assets/fondo1-piedras.png" type="Texture" id=5]
-[ext_resource path="res://assets/fondo-5-piedras.png" type="Texture" id=6]
-[ext_resource path="res://assets/Screenshot from 2023-03-08 08-18-00.png" type="Texture" id=7]
-[ext_resource path="res://assets/cantidad-jugador-2.png" type="Texture" id=8]
+[ext_resource path="res://font/FredokaOne-Regular.ttf" type="FontFile" id=1]
+[ext_resource path="res://assets/cantidad-jugador-4.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/cantidad-jugador-3.png" type="Texture2D" id=3]
+[ext_resource path="res://assets/cantidad-jugador-1.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/fondo1-piedras.png" type="Texture2D" id=5]
+[ext_resource path="res://assets/fondo-5-piedras.png" type="Texture2D" id=6]
+[ext_resource path="res://assets/Screenshot from 2023-03-08 08-18-00.png" type="Texture2D" id=7]
+[ext_resource path="res://assets/cantidad-jugador-2.png" type="Texture2D" id=8]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="FontFile" id=1]
 size = 64
 extra_spacing_char = 2
 font_data = ExtResource( 1 )
@@ -21,46 +21,46 @@ __meta__ = {
 "_edit_vertical_guides_": [ 960.0 ]
 }
 
-[node name="Fondo1-piedras" type="Sprite" parent="."]
+[node name="Fondo1-piedras" type="Sprite2D" parent="."]
 position = Vector2( 960, 539.875 )
 scale = Vector2( 0.899667, 0.899459 )
 texture = ExtResource( 5 )
 
-[node name="Cantidad-jugador-1" type="Sprite" parent="."]
+[node name="Cantidad-jugador-1" type="Sprite2D" parent="."]
 position = Vector2( 352, 568 )
 scale = Vector2( 0.980639, 0.980412 )
 texture = ExtResource( 4 )
 
-[node name="Cantidad-jugador-2" type="Sprite" parent="."]
+[node name="Cantidad-jugador-2" type="Sprite2D" parent="."]
 position = Vector2( 766.099, 584.453 )
 scale = Vector2( 0.995908, 0.995678 )
 texture = ExtResource( 8 )
 
-[node name="Cantidad-jugador-3" type="Sprite" parent="."]
+[node name="Cantidad-jugador-3" type="Sprite2D" parent="."]
 position = Vector2( 1144, 584 )
 scale = Vector2( 0.972709, 0.972484 )
 texture = ExtResource( 3 )
 
-[node name="Cantidad-jugador-4" type="Sprite" parent="."]
+[node name="Cantidad-jugador-4" type="Sprite2D" parent="."]
 position = Vector2( 1552, 600 )
 scale = Vector2( 0.97217, 0.971945 )
 texture = ExtResource( 2 )
 
-[node name="Fondo-5-piedras" type="Sprite" parent="."]
+[node name="Fondo-5-piedras" type="Sprite2D" parent="."]
 visible = false
 position = Vector2( 960, 896 )
 texture = ExtResource( 6 )
 
-[node name="ScreenshotFrom2023-03-0808-18-00" type="Sprite" parent="."]
+[node name="ScreenshotFrom2023-03-0808-18-00" type="Sprite2D" parent="."]
 visible = false
 position = Vector2( 954.337, 534.25 )
 scale = Vector2( 1.0941, 1.0941 )
 texture = ExtResource( 7 )
 
 [node name="Title" type="Label" parent="."]
-margin_left = 448.0
-margin_top = 232.0
-margin_right = 1474.0
-margin_bottom = 311.0
+offset_left = 448.0
+offset_top = 232.0
+offset_right = 1474.0
+offset_bottom = 311.0
 custom_fonts/font = SubResource( 1 )
 text = "¿Cuántos astronautas jugarán?"
