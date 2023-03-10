@@ -212,11 +212,9 @@ texture_normal = ExtResource( 23 )
 texture_hover = ExtResource( 24 )
 expand = true
 
-
 [node name="Node2D" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
 position = Vector2( -50.9257, -2.53799 )
 scale = Vector2( 0.328164, 0.765298 )
-
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnsalir_pressed"]
