@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://3564dbpjphtd"
+=======
+uid="uid://vbc6qxkaaq0b"
+>>>>>>> test
 path="res://.godot/imported/boton-info-hover.png-aebc862a1d19c8c3a52f6553cf566084.ctex"
 metadata={
 "vram_texture": false

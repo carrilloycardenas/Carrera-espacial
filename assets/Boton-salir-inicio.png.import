@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bt0i0qx04tipp"
+=======
+uid="uid://6v23lp2snnyb"
+>>>>>>> test
 path="res://.godot/imported/Boton-salir-inicio.png-bae66f707e5fd32209c0e50a2c54faf0.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dtdk32qr08igq"
+=======
+uid="uid://c3fhyms1r780w"
+>>>>>>> test
 path="res://.godot/imported/boton-siguiente.png-c09a0fcd10754dc45c8d23b8f9d5f195.ctex"
 metadata={
 "vram_texture": false

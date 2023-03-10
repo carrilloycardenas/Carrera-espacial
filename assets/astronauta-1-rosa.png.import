@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c7rvm6reof0b4"
+=======
+uid="uid://4jq5ni705hb2"
+>>>>>>> test
 path="res://.godot/imported/astronauta-1-rosa.png-5df986a1d0ff148f90275751a692cb85.ctex"
 metadata={
 "vram_texture": false

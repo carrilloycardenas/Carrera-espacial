@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://nc0y4wbytcge"
+=======
+uid="uid://bmn60n2w0yj4i"
+>>>>>>> test
 path="res://.godot/imported/Boton-tirar-hover.png-26fd2cc01e16debcac655d7ba40822df.ctex"
 metadata={
 "vram_texture": false

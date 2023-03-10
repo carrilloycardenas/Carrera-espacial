@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d0rnubvlndh6o"
+=======
+uid="uid://bxf71le4775q2"
+>>>>>>> test
 path="res://.godot/imported/tablero.png-90d158e797385977ed915a5a45271600.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bjn7xrixm3ea6"
+=======
+uid="uid://brxc2hnei4gsy"
+>>>>>>> test
 path="res://.godot/imported/astronauta-3-verde.png-2b93072344f5b89201a949892394e9d4.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bj25murpoecd0"
+=======
+uid="uid://dg8xrgu68u4xb"
+>>>>>>> test
 path="res://.godot/imported/boton-sonido-cancelado.png-41d411c46ece9d519664d56319d7fc82.ctex"
 metadata={
 "vram_texture": false

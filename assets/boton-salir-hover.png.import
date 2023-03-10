@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cnjprnd1v0tsh"
+=======
+uid="uid://c8fegl1xyuxme"
+>>>>>>> test
 path="res://.godot/imported/boton-salir-hover.png-dad22859ca535db88240e2f8ed772fb5.ctex"
 metadata={
 "vram_texture": false

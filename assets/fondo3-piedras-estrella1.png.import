@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bsp46tyw6u535"
+=======
+uid="uid://jn0wpridn7vx"
+>>>>>>> test
 path="res://.godot/imported/fondo3-piedras-estrella1.png-b37615366bf8688a5d138ae1dee54931.ctex"
 metadata={
 "vram_texture": false

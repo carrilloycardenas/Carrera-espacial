@@ -19,6 +19,18 @@ func _on_btntirar_pressed():
 
 func _on_CheckButton_pressed():
 	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (!((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN))) else Window.MODE_WINDOWED
+<<<<<<< HEAD
+=======
+
+>>>>>>> test
 
 func _on_btnsalir_pressed():
+	get_node("Hover-seleccionjugadores").visible = true
+
+
+func _on_TextureButton_pressed():
 	get_tree().quit()
+
+
+func _on_btnregresar_pressed():
+	get_node("Hover-seleccionjugadores").visible = false

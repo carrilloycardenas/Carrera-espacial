@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dw6fyfp0o5ivc"
+=======
+uid="uid://c375kbkgbqf3v"
+>>>>>>> test
 path="res://.godot/imported/cantidad-jugador-2.png-9f470d41a1ac448da42491f3dadeabb2.ctex"
 metadata={
 "vram_texture": false

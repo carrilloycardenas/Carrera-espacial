@@ -1,6 +1,10 @@
 [gd_resource type="Environment" load_steps=2 format=3 uid="uid://ciqpvr4f64nb5"]
 
+<<<<<<< HEAD
 [sub_resource type="Sky" id="1"]
+=======
+[sub_resource type="Sky" id=1]
+>>>>>>> test
 
 [resource]
 background_mode = 2

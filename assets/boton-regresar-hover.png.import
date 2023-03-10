@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dyhkksil66igt"
+=======
+uid="uid://bafaobh03ri18"
+>>>>>>> test
 path="res://.godot/imported/boton-regresar-hover.png-fb072983b86c99c2150b96532cd6a5f7.ctex"
 metadata={
 "vram_texture": false

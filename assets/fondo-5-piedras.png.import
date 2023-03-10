@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c464qs7jyq5pc"
+=======
+uid="uid://crfdhut580kq4"
+>>>>>>> test
 path="res://.godot/imported/fondo-5-piedras.png-f530770bd8ac3431839bcbaab730e8d0.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bw1efxeuaw2a8"
+=======
+uid="uid://l2l3lym8ihqu"
+>>>>>>> test
 path="res://.godot/imported/boton-siguiente-hover.png-f273b80143ae3bdd8134df5cae0f2fc2.ctex"
 metadata={
 "vram_texture": false

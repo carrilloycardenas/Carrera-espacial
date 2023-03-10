@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bejhimpor5jf1"
+=======
+uid="uid://dnid2efjtdw1q"
+>>>>>>> test
 path="res://.godot/imported/Fondo-espacio-dado.png-11750358e59973fc356b190e31e9d781.ctex"
 metadata={
 "vram_texture": false

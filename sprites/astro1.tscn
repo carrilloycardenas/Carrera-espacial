@@ -1,19 +1,33 @@
 [gd_scene load_steps=4 format=3 uid="uid://6378inqdx4be"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c7rvm6reof0b4" path="res://assets/astronauta-1-rosa.png" id="1"]
 [ext_resource type="Script" path="res://sprites/astro1.gd" id="2"]
+=======
+[ext_resource path="res://assets/astronauta-1-rosa.png" type="Texture2D" id=1]
+[ext_resource path="res://sprites/astro1.gd" type="Script" id=2]
+>>>>>>> test
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 53.0973
 height = 258.679
 
 [node name="astro1" type="CharacterBody2D"]
+<<<<<<< HEAD
 script = ExtResource("2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(14, -44)
 scale = Vector2(0.226, 0.226)
 texture = ExtResource("1")
+=======
+script = ExtResource( 2 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( 14, -44 )
+scale = Vector2( 0.226, 0.226 )
+texture = ExtResource( 1 )
+>>>>>>> test
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13, -44)

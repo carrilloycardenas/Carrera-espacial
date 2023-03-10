@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://rah0f3fvbj42"
+=======
+uid="uid://ckrefat5tf376"
+>>>>>>> test
 path="res://.godot/imported/astronauta-advertencia-4-animacion.png-83418ea245e41b8ad8cb5aab24ffe39f.ctex"
 metadata={
 "vram_texture": false

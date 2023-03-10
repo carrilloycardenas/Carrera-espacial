@@ -2,7 +2,11 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD
 uid="uid://cf8lw263ugwgc"
+=======
+uid="uid://dcre1xaipvspm"
+>>>>>>> test
 path="res://.godot/imported/FredokaOne-Regular.ttf-088271b952b0427d72ac517d4aaaa1ba.fontdata"
 
 [deps]

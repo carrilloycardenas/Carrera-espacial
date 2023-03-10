@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c576h1memuuu7"
+=======
+uid="uid://bhgb6a61pfkvc"
+>>>>>>> test
 path="res://.godot/imported/Hover-seleccion.jugadores.png-2c704598ccc330700a79aa897ceb7698.ctex"
 metadata={
 "vram_texture": false

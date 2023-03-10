@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cs1dqjlmxiqqj"
+=======
+uid="uid://thrpnmrow7ub"
+>>>>>>> test
 path="res://.godot/imported/astronauta-4-azul.png-453d113c035e714f10541adcc7d79e49.ctex"
 metadata={
 "vram_texture": false

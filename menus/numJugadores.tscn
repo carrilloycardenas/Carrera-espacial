@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=3 format=2]
 
+<<<<<<< HEAD
 [ext_resource path="res://font/FredokaOne-Regular.ttf" type="FontFile" id=1]
 [ext_resource path="res://assets/cantidad-jugador-4.png" type="Texture2D" id=2]
 [ext_resource path="res://assets/cantidad-jugador-3.png" type="Texture2D" id=3]
@@ -13,14 +14,20 @@
 size = 64
 extra_spacing_char = 2
 font_data = ExtResource( 1 )
+=======
+[ext_resource path="res://assets/FONDO ANIMADO/fondo-piedras.png" type="Texture2D" id=5]
+[ext_resource path="res://scripts/paralaxOnMenus.gd" type="Script" id=10]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_vertical_guides_": [ 960.0 ]
-}
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource( 10 )
+>>>>>>> test
 
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.487111, 0.487111 )
+motion_mirroring = Vector2( 3840, 0 )
+
+<<<<<<< HEAD
 [node name="Fondo1-piedras" type="Sprite2D" parent="."]
 position = Vector2( 960, 539.875 )
 scale = Vector2( 0.899667, 0.899459 )
@@ -64,3 +71,11 @@ offset_right = 1474.0
 offset_bottom = 311.0
 custom_fonts/font = SubResource( 1 )
 text = "¿Cuántos astronautas jugarán?"
+=======
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2( 3101.96, 1135.26 )
+scale = Vector2( 0.985401, 0.985401 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 6275.46, 2264.88 )
+>>>>>>> test

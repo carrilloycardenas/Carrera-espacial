@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dkdjygtuemwhs"
+=======
+uid="uid://cp2hiu1wakbp2"
+>>>>>>> test
 path="res://.godot/imported/Boton-jugar.png-43e987365f1b92e84664687c1d724705.ctex"
 metadata={
 "vram_texture": false

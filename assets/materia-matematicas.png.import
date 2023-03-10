@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://ogkml1mlnxm5"
+=======
+uid="uid://ce5qh5td08bdg"
+>>>>>>> test
 path="res://.godot/imported/materia-matematicas.png-f7b51871793360035301f3e6731876bd.ctex"
 metadata={
 "vram_texture": false

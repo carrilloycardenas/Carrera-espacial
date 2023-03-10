@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=19 format=3 uid="uid://bvdl6dqmr8rb4"]
 
 [ext_resource type="Texture2D" uid="uid://d0rnubvlndh6o" path="res://assets/tablero.png" id="1"]
@@ -18,8 +19,51 @@
 [ext_resource type="Texture2D" uid="uid://bjn7xrixm3ea6" path="res://assets/astronauta-3-verde.png" id="17"]
 [ext_resource type="Texture2D" uid="uid://cs1dqjlmxiqqj" path="res://assets/astronauta-4-azul.png" id="18"]
 [ext_resource type="PackedScene" uid="uid://6378inqdx4be" path="res://sprites/astro1.tscn" id="19"]
+=======
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://assets/tablero.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/Boton-tirar-normal.png" type="Texture2D" id=3]
+[ext_resource path="res://assets/Boton-tirar-hover.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/boton-info-normal.png" type="Texture2D" id=5]
+[ext_resource path="res://assets/boton-info-hover.png" type="Texture2D" id=6]
+[ext_resource path="res://assets/Boton-sonido-hover.png" type="Texture2D" id=7]
+[ext_resource path="res://assets/boton-sonido-normal.png" type="Texture2D" id=8]
+[ext_resource path="res://assets/boton-salir-normal.png" type="Texture2D" id=9]
+[ext_resource path="res://assets/boton-salir-hover.png" type="Texture2D" id=10]
+[ext_resource path="res://assets/diseño-tablero.png" type="Texture2D" id=11]
+[ext_resource path="res://assets/astronauta-1-rosa.png" type="Texture2D" id=12]
+[ext_resource path="res://font/FredokaOne-Regular.ttf" type="FontFile" id=13]
+[ext_resource path="res://sprites/dado.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scripts/tablero.gd" type="Script" id=15]
+[ext_resource path="res://assets/astronauta-2-negro.png" type="Texture2D" id=16]
+[ext_resource path="res://assets/astronauta-3-verde.png" type="Texture2D" id=17]
+[ext_resource path="res://assets/astronauta-4-azul.png" type="Texture2D" id=18]
+[ext_resource path="res://sprites/astro1.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/contenedor-advertencia.png" type="Texture2D" id=20]
+[ext_resource path="res://sprites/astro-warning.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/Hover-seleccion.jugadores.png" type="Texture2D" id=22]
+[ext_resource path="res://assets/boton-ok.png" type="Texture2D" id=23]
+[ext_resource path="res://assets/boton-ok-hover.png" type="Texture2D" id=24]
+[ext_resource path="res://assets/boton-regresar-hover.png" type="Texture2D" id=25]
+[ext_resource path="res://assets/Boton-regresar.png" type="Texture2D" id=26]
+
+[sub_resource type="FontFile" id=1]
+size = 37
+extra_spacing_char = 2
+font_data = ExtResource( 13 )
+>>>>>>> test
+
+[sub_resource type="FontFile" id=2]
+size = 28
+font_data = ExtResource( 13 )
+
+[sub_resource type="FontFile" id=3]
+font_data = ExtResource( 13 )
 
 [node name="tablero" type="Node2D"]
+<<<<<<< HEAD
 scale = Vector2(1.875, 1.875)
 script = ExtResource("15")
 
@@ -52,6 +96,43 @@ texture = ExtResource("17")
 position = Vector2(-110.573, 244.814)
 scale = Vector2(0.384, 0.384)
 texture = ExtResource("18")
+=======
+scale = Vector2( 1.875, 1.875 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 728.0 ]
+}
+
+[node name="Tablero" type="Sprite2D" parent="."]
+position = Vector2( 512, 288 )
+scale = Vector2( 0.533333, 0.533334 )
+texture = ExtResource( 1 )
+
+[node name="Fondo-espacio-dado" type="Sprite2D" parent="."]
+position = Vector2( 825.008, 287.5 )
+scale = Vector2( 0.533657, 0.533057 )
+texture = ExtResource( 2 )
+
+[node name="Astronauta-1-rosa" type="Sprite2D" parent="Fondo-espacio-dado"]
+position = Vector2( -110.573, -13.0417 )
+scale = Vector2( 0.384381, 0.384814 )
+texture = ExtResource( 12 )
+
+[node name="Astronauta-2-negro" type="Sprite2D" parent="Fondo-espacio-dado"]
+position = Vector2( -110.573, 72.225 )
+scale = Vector2( 0.384, 0.384 )
+texture = ExtResource( 16 )
+
+[node name="Astronauta-3-verde" type="Sprite2D" parent="Fondo-espacio-dado"]
+position = Vector2( -110.573, 156.644 )
+scale = Vector2( 0.384, 0.384 )
+texture = ExtResource( 17 )
+
+[node name="Astronauta-4-azul" type="Sprite2D" parent="Fondo-espacio-dado"]
+position = Vector2( -110.573, 244.814 )
+scale = Vector2( 0.384, 0.384 )
+texture = ExtResource( 18 )
+>>>>>>> test
 
 [node name="spriteDado" parent="Fondo-espacio-dado" instance=ExtResource("14")]
 position = Vector2(7.48047, -173.527)
@@ -62,6 +143,10 @@ offset_left = -51.0
 offset_top = -38.0
 offset_right = 187.0
 offset_bottom = 8.0
+<<<<<<< HEAD
+=======
+custom_fonts/font = SubResource( 1 )
+>>>>>>> test
 text = "Mariana"
 
 [node name="lbl-player2" type="Label" parent="Fondo-espacio-dado"]
@@ -69,6 +154,10 @@ offset_left = -51.0
 offset_top = 52.0
 offset_right = 185.0
 offset_bottom = 98.0
+<<<<<<< HEAD
+=======
+custom_fonts/font = SubResource( 1 )
+>>>>>>> test
 text = "Dianita"
 
 [node name="lbl-player3" type="Label" parent="Fondo-espacio-dado"]
@@ -76,6 +165,10 @@ offset_left = -49.0
 offset_top = 140.0
 offset_right = 185.0
 offset_bottom = 186.0
+<<<<<<< HEAD
+=======
+custom_fonts/font = SubResource( 1 )
+>>>>>>> test
 text = "Luisito"
 
 [node name="lbl-player4" type="Label" parent="Fondo-espacio-dado"]
@@ -83,6 +176,10 @@ offset_left = -49.0
 offset_top = 224.0
 offset_right = 185.0
 offset_bottom = 270.0
+<<<<<<< HEAD
+=======
+custom_fonts/font = SubResource( 1 )
+>>>>>>> test
 text = "Paulette"
 
 [node name="btn-tirar" type="TextureButton" parent="."]
@@ -90,9 +187,18 @@ offset_left = 730.0
 offset_top = 499.0
 offset_right = 1087.0
 offset_bottom = 597.0
+<<<<<<< HEAD
 scale = Vector2(0.531, 0.531)
 texture_normal = ExtResource("3")
 texture_hover = ExtResource("4")
+=======
+scale = Vector2( 0.531, 0.531 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+>>>>>>> test
 
 [node name="btn-info" type="TextureButton" parent="."]
 offset_left = 858.0
@@ -100,27 +206,47 @@ offset_top = 30.0
 offset_right = 940.0
 offset_bottom = 106.0
 grow_vertical = 0
+<<<<<<< HEAD
 scale = Vector2(0.535, 0.535)
 texture_normal = ExtResource("5")
 texture_hover = ExtResource("6")
+=======
+scale = Vector2( 0.535, 0.535 )
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+>>>>>>> test
 
 [node name="btn-sonido" type="TextureButton" parent="."]
 offset_left = 799.0
 offset_top = 30.0
 offset_right = 882.0
 offset_bottom = 108.0
+<<<<<<< HEAD
 scale = Vector2(0.531, 0.531)
 texture_normal = ExtResource("8")
 texture_hover = ExtResource("7")
 
 [node name="btn-salir" type="TextureButton" parent="."]
+=======
+scale = Vector2( 0.531, 0.531 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+
+[node name="btn-popupSalir" type="TextureButton" parent="."]
+>>>>>>> test
 offset_left = 918.0
 offset_top = 28.0
 offset_right = 989.0
 offset_bottom = 106.0
+<<<<<<< HEAD
 scale = Vector2(0.6, 0.6)
 texture_normal = ExtResource("9")
 texture_hover = ExtResource("10")
+=======
+scale = Vector2( 0.6, 0.6 )
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
+>>>>>>> test
 
 [node name="Diseño-tablero" type="Sprite2D" parent="."]
 visible = false
@@ -132,5 +258,64 @@ texture = ExtResource("11")
 position = Vector2(580, 548)
 scale = Vector2(0.9, 0.9)
 
+<<<<<<< HEAD
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
+=======
+[node name="Hover-seleccionjugadores" type="Sprite2D" parent="."]
+position = Vector2( 509.317, 289.183 )
+scale = Vector2( 3.04726, 1.30668 )
+texture = ExtResource( 22 )
+
+[node name="Contenedor-advertencia" type="Sprite2D" parent="Hover-seleccionjugadores"]
+position = Vector2( 0.00360107, -1.31349 )
+scale = Vector2( 0.201922, 0.470894 )
+texture = ExtResource( 20 )
+
+[node name="astro" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
+position = Vector2( -52.3258, -9.06853 )
+scale = Vector2( 0.328163, 0.765297 )
+
+[node name="alto" type="Label" parent="Hover-seleccionjugadores"]
+offset_left = -16.4464
+offset_top = -70.2927
+offset_right = 68.5536
+offset_bottom = -30.2927
+scale = Vector2( 0.5, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "¡Alto!"
+
+[node name="Label" type="Label" parent="Hover-seleccionjugadores"]
+offset_left = -16.4465
+offset_top = -27.4357
+offset_right = 158.553
+offset_bottom = 21.5643
+scale = Vector2( 0.5, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "¿Seguro que quieres
+ salir?"
+
+[node name="btn-regresar" type="TextureButton" parent="Hover-seleccionjugadores"]
+offset_left = -17.8467
+offset_top = 33.7882
+offset_right = 54.1533
+offset_bottom = 75.7878
+scale = Vector2( 0.5, 1 )
+texture_normal = ExtResource( 26 )
+texture_hover = ExtResource( 25 )
+expand = true
+
+[node name="btn-salir" type="TextureButton" parent="Hover-seleccionjugadores"]
+offset_left = 29.7589
+offset_top = 36.6453
+offset_right = 113.759
+offset_bottom = 75.6453
+scale = Vector2( 0.5, 1 )
+texture_normal = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+expand = true
+
+[connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnsalir_pressed"]
+[connection signal="pressed" from="Hover-seleccionjugadores/btn-regresar" to="." method="_on_btnregresar_pressed"]
+[connection signal="pressed" from="Hover-seleccionjugadores/btn-salir" to="." method="_on_TextureButton_pressed"]
+>>>>>>> test

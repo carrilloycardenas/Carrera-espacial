@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bquahop0cs6ys"
+=======
+uid="uid://behkxlb3tpojm"
+>>>>>>> test
 path="res://.godot/imported/Dado-2.png-892ab8185af0d846dcb9eea797288ef4.ctex"
 metadata={
 "vram_texture": false

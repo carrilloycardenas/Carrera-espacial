@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://r6kxsfqwm8y1"
+=======
+uid="uid://cc0bhxsobqwyp"
+>>>>>>> test
 path="res://.godot/imported/contenedor-advertencia.png-aed381cbc3c00352d111d82f4b9a7fe8.ctex"
 metadata={
 "vram_texture": false

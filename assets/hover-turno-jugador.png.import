@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b4xk1u55q821r"
+=======
+uid="uid://dnjv38u8vkxom"
+>>>>>>> test
 path="res://.godot/imported/hover-turno-jugador.png-251813358a328532279d49756779f4be.ctex"
 metadata={
 "vram_texture": false
