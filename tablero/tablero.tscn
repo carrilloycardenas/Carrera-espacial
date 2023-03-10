@@ -20,7 +20,7 @@
 [ext_resource path="res://assets/astronauta-4-azul.png" type="Texture" id=18]
 [ext_resource path="res://sprites/astro1.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/contenedor-advertencia.png" type="Texture" id=20]
-[ext_resource path="res://sprites/astro-warning.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sprites/astro-ques.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/Hover-seleccion.jugadores.png" type="Texture" id=22]
 [ext_resource path="res://assets/boton-ok.png" type="Texture" id=23]
 [ext_resource path="res://assets/boton-ok-hover.png" type="Texture" id=24]
@@ -173,10 +173,6 @@ position = Vector2( 0.00360107, -1.31349 )
 scale = Vector2( 0.201922, 0.470894 )
 texture = ExtResource( 20 )
 
-[node name="astro" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
-position = Vector2( -52.3258, -9.06853 )
-scale = Vector2( 0.328163, 0.765297 )
-
 [node name="alto" type="Label" parent="Hover-seleccionjugadores"]
 margin_left = -16.4464
 margin_top = -70.2927
@@ -215,6 +211,12 @@ rect_scale = Vector2( 0.5, 1 )
 texture_normal = ExtResource( 23 )
 texture_hover = ExtResource( 24 )
 expand = true
+
+
+[node name="Node2D" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
+position = Vector2( -50.9257, -2.53799 )
+scale = Vector2( 0.328164, 0.765298 )
+
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnsalir_pressed"]
