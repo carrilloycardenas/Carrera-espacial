@@ -19,13 +19,13 @@
 [ext_resource path="res://assets/astronauta-3-verde.png" type="Texture" id=17]
 [ext_resource path="res://assets/astronauta-4-azul.png" type="Texture" id=18]
 [ext_resource path="res://sprites/astro1.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/contenedor-advertencia.png" type="Texture" id=20]
+[ext_resource path="res://assets/SALIR/contenedor-salir.png" type="Texture" id=20]
 [ext_resource path="res://sprites/astro-ques.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Hover-seleccion.jugadores.png" type="Texture" id=22]
-[ext_resource path="res://assets/boton-ok.png" type="Texture" id=23]
-[ext_resource path="res://assets/boton-ok-hover.png" type="Texture" id=24]
-[ext_resource path="res://assets/boton-regresar-hover.png" type="Texture" id=25]
-[ext_resource path="res://assets/Boton-regresar.png" type="Texture" id=26]
+[ext_resource path="res://assets/SALIR/fondo-pop ups.png" type="Texture" id=22]
+[ext_resource path="res://assets/SALIR/Boton-si-salir.png" type="Texture" id=23]
+[ext_resource path="res://assets/SALIR/Boton-no-hover.png" type="Texture" id=24]
+[ext_resource path="res://assets/SALIR/boton-si-hover.png" type="Texture" id=25]
+[ext_resource path="res://assets/SALIR/Boton-no-salir.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -170,18 +170,18 @@ scale = Vector2( 0.201922, 0.470894 )
 texture = ExtResource( 20 )
 
 [node name="alto" type="Label" parent="Hover-seleccionjugadores"]
-margin_left = -16.4464
+margin_left = -47.425
 margin_top = -70.2927
-margin_right = 68.5536
+margin_right = 37.575
 margin_bottom = -30.2927
 rect_scale = Vector2( 0.5, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "¡Alto!"
 
 [node name="Label" type="Label" parent="Hover-seleccionjugadores"]
-margin_left = -16.4465
+margin_left = -47.4251
 margin_top = -27.4357
-margin_right = 158.553
+margin_right = 127.574
 margin_bottom = 21.5643
 rect_scale = Vector2( 0.5, 1 )
 custom_fonts/font = SubResource( 3 )
@@ -189,27 +189,27 @@ text = "¿Seguro que quieres
  salir?"
 
 [node name="btn-regresar" type="TextureButton" parent="Hover-seleccionjugadores"]
-margin_left = -17.8467
-margin_top = 33.7882
-margin_right = 54.1533
-margin_bottom = 75.7878
+margin_left = 0.355423
+margin_top = 34.1963
+margin_right = 72.3554
+margin_bottom = 76.1959
 rect_scale = Vector2( 0.5, 1 )
 texture_normal = ExtResource( 26 )
-texture_hover = ExtResource( 25 )
-expand = true
-
-[node name="btn-salir" type="TextureButton" parent="Hover-seleccionjugadores"]
-margin_left = 29.7589
-margin_top = 36.6453
-margin_right = 113.759
-margin_bottom = 75.6453
-rect_scale = Vector2( 0.5, 1 )
-texture_normal = ExtResource( 23 )
 texture_hover = ExtResource( 24 )
 expand = true
 
+[node name="btn-salir" type="TextureButton" parent="Hover-seleccionjugadores"]
+margin_left = -56.5263
+margin_top = 37.4616
+margin_right = 27.4738
+margin_bottom = 76.4616
+rect_scale = Vector2( 0.5, 1 )
+texture_normal = ExtResource( 23 )
+texture_hover = ExtResource( 25 )
+expand = true
+
 [node name="Node2D" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
-position = Vector2( -50.9257, -2.53799 )
+position = Vector2( 78.4145, -8.25222 )
 scale = Vector2( 0.328164, 0.765298 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]

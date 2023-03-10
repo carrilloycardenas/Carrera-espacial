@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/paralaxOnMenus.gd" type="Script" id=1]
 [ext_resource path="res://assets/FONDO ANIMADO/fondo-piedras.png" type="Texture" id=2]
+[ext_resource path="res://assets/FONDO ANIMADO/imagen-piedras.png" type="Texture" id=3]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource( 1 )
@@ -15,3 +16,8 @@ texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 6260.29, 2261.97 )
+
+[node name="Imagen-piedras" type="Sprite" parent="."]
+position = Vector2( 1180, 963 )
+scale = Vector2( 0.843195, 0.843195 )
+texture = ExtResource( 3 )
