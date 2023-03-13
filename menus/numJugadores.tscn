@@ -1,15 +1,53 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://assets/cantidad-jugador-1.png" type="Texture" id=1]
-[ext_resource path="res://assets/cantidad-jugador-3.png" type="Texture" id=2]
-[ext_resource path="res://assets/cantidad-jugador-4.png" type="Texture" id=3]
-[ext_resource path="res://assets/cantidad-jugador-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-46.png" type="Texture" id=1]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-41.png" type="Texture" id=2]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-44.png" type="Texture" id=3]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-43.png" type="Texture" id=4]
 [ext_resource path="res://menus/paralax.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Screenshot from 2023-03-08 08-18-00.png" type="Texture" id=6]
+[ext_resource path="res://assets/boton-sonido-normal.png" type="Texture" id=7]
+[ext_resource path="res://assets/Boton-sonido-hover.png" type="Texture" id=8]
+[ext_resource path="res://assets/boton-info-normal.png" type="Texture" id=9]
+[ext_resource path="res://font/FredokaOne-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/boton-info-hover.png" type="Texture" id=11]
+[ext_resource path="res://assets/boton-salir-normal.png" type="Texture" id=12]
+[ext_resource path="res://assets/boton-salir-hover.png" type="Texture" id=13]
+[ext_resource path="res://scripts/numJuga.gd" type="Script" id=14]
+[ext_resource path="res://assets/SALIR/contenedor-salir.png" type="Texture" id=15]
+[ext_resource path="res://assets/SALIR/Boton-si-salir.png" type="Texture" id=16]
+[ext_resource path="res://assets/SALIR/Boton-no-hover.png" type="Texture" id=17]
+[ext_resource path="res://assets/SALIR/boton-si-hover.png" type="Texture" id=18]
+[ext_resource path="res://assets/SALIR/fondo-pop ups.png" type="Texture" id=19]
+[ext_resource path="res://sprites/astro-ques.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/SALIR/Boton-no-salir.png" type="Texture" id=21]
+[ext_resource path="res://assets/SALIR/CARRERA ESPACIAL_Mesa de trabajo 1 copia 4.png" type="Texture" id=22]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-39.png" type="Texture" id=23]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-42.png" type="Texture" id=24]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-45.png" type="Texture" id=25]
+[ext_resource path="res://assets/PAGINA CANTIDAD DE JUGADORES/cantidad-jugadores-40.png" type="Texture" id=26]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+extra_spacing_char = 2
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 10 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 62.0, 139.0 ],
+"_edit_vertical_guides_": [ 1496.0, 1798.0 ]
+}
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
 
@@ -20,29 +58,136 @@ scale = Vector2( 1.09817, 1.09817 )
 texture = ExtResource( 6 )
 
 [node name="1Jugador" type="TextureButton" parent="."]
-margin_left = 249.0
-margin_top = 419.0
-margin_right = 460.0
-margin_bottom = 727.0
+margin_left = 190.0
+margin_top = 379.0
+margin_right = 520.0
+margin_bottom = 793.0
 texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 24 )
+expand = true
 
 [node name="2Jugador" type="TextureButton" parent="."]
-margin_left = 625.0
-margin_top = 419.0
-margin_right = 918.0
-margin_bottom = 761.0
+margin_left = 601.0
+margin_top = 391.0
+margin_right = 930.0
+margin_bottom = 804.0
 texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 23 )
+expand = true
 
 [node name="3Jugador" type="TextureButton" parent="."]
-margin_left = 1001.0
-margin_top = 421.0
-margin_right = 1307.0
-margin_bottom = 761.0
-texture_normal = ExtResource( 2 )
+margin_left = 988.0
+margin_top = 397.0
+margin_right = 1320.0
+margin_bottom = 805.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 26 )
+expand = true
 
 [node name="4Jugador" type="TextureButton" parent="."]
-margin_left = 1413.0
-margin_top = 419.0
-margin_right = 1704.0
-margin_bottom = 786.0
-texture_normal = ExtResource( 3 )
+margin_left = 1391.0
+margin_top = 392.0
+margin_right = 1721.0
+margin_bottom = 806.0
+texture_normal = ExtResource( 25 )
+texture_hover = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 483.0
+margin_top = 240.0
+margin_right = 1392.0
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 1 )
+text = "¿Cuántos astronautas jugaran?"
+
+[node name="btn-info" type="TextureButton" parent="."]
+margin_left = 1604.0
+margin_top = 61.0
+margin_right = 1686.0
+margin_bottom = 137.0
+grow_vertical = 0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 11 )
+
+[node name="btn-sonido" type="TextureButton" parent="."]
+margin_left = 1495.0
+margin_top = 61.0
+margin_right = 1578.0
+margin_bottom = 139.0
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+
+[node name="btn-popupSalir" type="TextureButton" parent="."]
+margin_left = 1719.0
+margin_top = 56.0
+margin_right = 1790.0
+margin_bottom = 134.0
+rect_scale = Vector2( 1.2, 1.2 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+
+[node name="Hover-seleccionjugadores" type="Sprite" parent="."]
+visible = false
+position = Vector2( 983, 505 )
+scale = Vector2( 3.04726, 1.30668 )
+texture = ExtResource( 19 )
+
+[node name="Contenedor-advertencia" type="Sprite" parent="Hover-seleccionjugadores"]
+position = Vector2( -15.6843, 14.9673 )
+scale = Vector2( 0.323689, 0.754861 )
+texture = ExtResource( 15 )
+
+[node name="CarreraEspacialMesaDeTrabajo1Copia4" type="Sprite" parent="Hover-seleccionjugadores"]
+visible = false
+position = Vector2( -7.47528, 26.7854 )
+scale = Vector2( 0.157519, 0.367343 )
+texture = ExtResource( 22 )
+
+[node name="alto" type="Label" parent="Hover-seleccionjugadores"]
+margin_left = -132.578
+margin_top = -97.9582
+margin_right = 358.422
+margin_bottom = -38.9582
+rect_scale = Vector2( 0.5, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "¡OH NO! Has oprimido salir."
+
+[node name="Label" type="Label" parent="Hover-seleccionjugadores"]
+margin_left = -132.578
+margin_top = -24.4896
+margin_right = 244.422
+margin_bottom = 54.5104
+rect_scale = Vector2( 0.5, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "¿Estas seguro que quieres
+salir del juego?"
+
+[node name="btn-regresar" type="TextureButton" parent="Hover-seleccionjugadores"]
+margin_left = -3.28165
+margin_top = 99.4888
+margin_right = 68.7184
+margin_bottom = 141.488
+rect_scale = Vector2( 0.95, 1.9 )
+texture_normal = ExtResource( 21 )
+texture_hover = ExtResource( 17 )
+expand = true
+
+[node name="btn-salir" type="TextureButton" parent="Hover-seleccionjugadores"]
+margin_left = -97.7928
+margin_top = 106.376
+margin_right = -13.7927
+margin_bottom = 145.376
+rect_scale = Vector2( 0.85, 2 )
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 18 )
+expand = true
+
+[node name="Node2D" parent="Hover-seleccionjugadores" instance=ExtResource( 20 )]
+position = Vector2( 118.139, 5.35709 )
+scale = Vector2( 0.328164, 0.765298 )
+
+[connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnpopupSalir_pressed"]
+[connection signal="pressed" from="Hover-seleccionjugadores/btn-salir" to="." method="_on_btnsalir_pressed"]
