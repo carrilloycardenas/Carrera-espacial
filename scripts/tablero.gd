@@ -26,7 +26,7 @@ onready var astro1 = get_node("astro1")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for n in range(players.size()):
-		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n])
+		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n].name)
 	
 func _on_btntirar_pressed():
 	astro1.avanzar(rng.randi_range(1,6))

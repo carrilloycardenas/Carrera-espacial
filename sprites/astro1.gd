@@ -26,7 +26,26 @@ func _input(event):
 	print(currPos)
 
 func avanzar(dado):
-	currPos[0] -= (48.5*dado)
+	for i in range(dado):
+		yield(get_tree().create_timer(1.0), "timeout")
+		if currPos[0] > 142.5 && currPos[1] == 546:
+			currPos[0] -= 48.5
+		elif currPos[0] == 142.5 && currPos[1] == 546:
+			currPos[1] -= 48.5
+		elif currPos[0] < 579 && currPos[1] == 497.5:
+			currPos[0] += 48.5
+		elif currPos[0] == 579 && currPos[1] == 497.5:
+			currPos[1] -= 48.5
+		elif currPos[0] > 142.5 && currPos[1] == 449:
+			currPos[0] -= 48.5
+		elif currPos[0] == 142.5 && currPos[1] == 449:
+			currPos[1] -= 48.5
+		elif currPos[0] < 579 && currPos[1] == 400.5:
+			currPos[0] += 48.5
+		elif currPos[0] == 579 && currPos[1] == 400.5:
+			currPos[1] -= 48.5
+		elif currPos[0] > 142.5 && currPos[1] == 352:
+			currPos[0] -= 48.5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
