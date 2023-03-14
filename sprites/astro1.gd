@@ -46,6 +46,26 @@ func avanzar(dado):
 			currPos[1] -= 48.5
 		elif currPos[0] > 142.5 && currPos[1] == 352:
 			currPos[0] -= 48.5
+		elif currPos[0] == 142.5 && currPos[1] == 352:
+			currPos[1] -= 48.5
+		elif currPos[0] < 579 && currPos[1] == 303.5:
+			currPos[0] += 48.5
+		elif currPos[0] == 579 && currPos[1] == 303.5:
+			currPos[1] -= 48.5
+		elif currPos[0] > 142.5 && currPos[1] == 255:
+			currPos[0] -= 48.5
+		elif currPos[0] == 142.5 && currPos[1] == 255:
+			currPos[1] -= 48.5
+		elif currPos[0] < 579 && currPos[1] == 206.5:
+			currPos[0] += 48.5
+		elif currPos[0] == 579 && currPos[1] == 206.5:
+			currPos[1] -= 48.5
+		elif currPos[0] > 142.5 && currPos[1] == 158:
+			currPos[0] -= 48.5
+		elif currPos[0] == 142.5 && currPos[1] == 158:
+			currPos[1] -= 48.5
+		elif currPos[0] < 579 && currPos[1] == 109.5:
+			currPos[0] += 48.5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

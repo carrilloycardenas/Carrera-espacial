@@ -29,7 +29,12 @@ func _ready():
 		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n].name)
 	
 func _on_btntirar_pressed():
-	astro1.avanzar(rng.randi_range(1,6))
+	var dado = rng.randi_range(1,6)
+	get_node("Fondo-espacio-dado/spriteDado/dado").play()
+	yield(get_tree().create_timer(3.0), "timeout")
+	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
+	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
+	astro1.avanzar(dado)
 
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
