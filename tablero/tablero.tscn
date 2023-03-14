@@ -158,8 +158,10 @@ position = Vector2( 512, 288 )
 scale = Vector2( 0.533333, 0.533334 )
 texture = ExtResource( 11 )
 
+[node name="astro1" parent="." instance=ExtResource( 19 )]
+position = Vector2( 578.133, 550.933 )
+
 [node name="Hover-seleccionjugadores" type="Sprite" parent="."]
-visible = false
 position = Vector2( 509.317, 289.183 )
 scale = Vector2( 3.04726, 1.30668 )
 texture = ExtResource( 22 )
@@ -211,9 +213,6 @@ expand = true
 [node name="Node2D" parent="Hover-seleccionjugadores" instance=ExtResource( 21 )]
 position = Vector2( 78.4145, -8.25222 )
 scale = Vector2( 0.328164, 0.765298 )
-
-[node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 578.133, 550.933 )
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnsalir_pressed"]
