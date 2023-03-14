@@ -163,6 +163,7 @@ texture = ExtResource( 11 )
 position = Vector2( 578.133, 550.933 )
 
 [node name="Hover-seleccionjugadores" type="Sprite" parent="."]
+visible = false
 position = Vector2( 509.317, 289.183 )
 scale = Vector2( 3.04726, 1.30668 )
 texture = ExtResource( 22 )
