@@ -1,0 +1,23 @@
+{
+    "astro1":{
+        "name": "Daniel",
+        "position": [579,546],
+        "dice": 0
+    },
+    "astro2":{
+        "name": "Carrillo",
+        "position": [579,546],
+        "dice": 0
+    },
+    "astro3":{
+        "name": "Elizabeth",
+        "position": [579,546],
+        "dice": 0
+    },
+    "astro4":{
+        "name": "Elvira",
+        "position": [579,546],
+        "dice": 0
+    }
+    
+}
