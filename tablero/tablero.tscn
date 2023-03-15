@@ -53,7 +53,7 @@ scale = Vector2( 1.875, 1.875 )
 script = ExtResource( 15 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 728.0, 56.0, 132.0 ],
-"_edit_vertical_guides_": [ 630.0 ]
+"_edit_vertical_guides_": [ 630.0, 401.0 ]
 }
 
 [node name="Tablero" type="Sprite" parent="."]
@@ -251,13 +251,23 @@ scale = Vector2( 0.537903, 0.537903 )
 texture = ExtResource( 28 )
 
 [node name="lbl-felicidades" type="Label" parent="ganaste"]
-margin_left = 223.467
-margin_top = 232.0
-margin_right = 263.467
-margin_bottom = 265.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+margin_left = 213.867
+margin_top = 215.467
+margin_right = 477.867
+margin_bottom = 248.467
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "¡Muchas felicidades !"
+
+[node name="lbl-felicidadesPlus" type="Label" parent="ganaste"]
+margin_left = 213.867
+margin_top = 266.133
+margin_right = 750.867
+margin_bottom = 335.133
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Has logrado conquistar este 
+gran planeta."
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
