@@ -40,7 +40,7 @@ func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
 
 func _on_btnsalir_pressed():
-	get_node("Hover-seleccionjugadores").visible = true
+	get_node("salir").visible = true
 
 
 func _on_TextureButton_pressed():
@@ -48,5 +48,5 @@ func _on_TextureButton_pressed():
 
 
 func _on_btnregresar_pressed():
-	get_node("Hover-seleccionjugadores").visible = false
+	get_node("salir").visible = false
 
