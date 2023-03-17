@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -30,6 +30,10 @@
 [ext_resource path="res://assets/GANASTE/texto-has ganado.png" type="Texture" id=28]
 [ext_resource path="res://assets/GANASTE/CARRERA ESPACIAL_Mesa de trabajo 1 copia 5.png" type="Texture" id=29]
 [ext_resource path="res://assets/GANASTE/contenedor-ganaste.png" type="Texture" id=30]
+[ext_resource path="res://sprites/astro-correcto.tscn" type="PackedScene" id=31]
+[ext_resource path="res://assets/RESPUESTA CORRECTA/Boton-ok-retroalimentacion.png" type="Texture" id=32]
+[ext_resource path="res://assets/RESPUESTA CORRECTA/Boton-ok-retroalimentacion-hover.png" type="Texture" id=33]
+[ext_resource path="res://assets/RESPUESTA CORRECTA/Web 1920 – 22.png" type="Texture" id=34]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -46,6 +50,14 @@ font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 26
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 21
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 21
 font_data = ExtResource( 13 )
 
 [node name="tablero" type="Node2D"]
@@ -268,6 +280,60 @@ custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Has logrado conquistar este 
 gran planeta."
+
+[node name="pregunta" type="Node2D" parent="."]
+
+[node name="correcto" type="Node2D" parent="."]
+visible = false
+
+[node name="Hover-seleccionjugadores" type="Sprite" parent="correcto"]
+position = Vector2( 521.333, 302.933 )
+scale = Vector2( 0.575453, 0.600856 )
+texture = ExtResource( 22 )
+
+[node name="Contenedor-ganaste" type="Sprite" parent="correcto"]
+position = Vector2( 480, 317.067 )
+scale = Vector2( 0.700684, 0.495648 )
+texture = ExtResource( 30 )
+
+[node name="Web1920–22" type="Sprite" parent="correcto"]
+visible = false
+position = Vector2( 512, 288.067 )
+scale = Vector2( 0.53321, 0.53321 )
+texture = ExtResource( 34 )
+
+[node name="astro-correcto" parent="correcto" instance=ExtResource( 31 )]
+position = Vector2( 825.6, 317.867 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="TextureButton" type="TextureButton" parent="correcto"]
+margin_left = 401.067
+margin_top = 397.867
+margin_right = 579.067
+margin_bottom = 450.867
+texture_normal = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
+expand = true
+
+[node name="rightwrong" type="Label" parent="correcto"]
+margin_left = 181.333
+margin_top = 236.8
+margin_right = 221.333
+margin_bottom = 265.8
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "C"
+
+[node name="text" type="Label" parent="correcto"]
+margin_left = 191.0
+margin_top = 288.0
+margin_right = 730.0
+margin_bottom = 371.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "E"
+
+[node name="incorrecto" type="Node2D" parent="."]
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
