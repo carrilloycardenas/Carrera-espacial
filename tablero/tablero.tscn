@@ -1,15 +1,15 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
 [ext_resource path="res://assets/Boton-tirar-normal.png" type="Texture" id=3]
 [ext_resource path="res://assets/Boton-tirar-hover.png" type="Texture" id=4]
-[ext_resource path="res://assets/boton-info-normal.png" type="Texture" id=5]
-[ext_resource path="res://assets/boton-info-hover.png" type="Texture" id=6]
-[ext_resource path="res://assets/Boton-sonido-hover.png" type="Texture" id=7]
-[ext_resource path="res://assets/boton-sonido-normal.png" type="Texture" id=8]
-[ext_resource path="res://assets/boton-salir-normal.png" type="Texture" id=9]
-[ext_resource path="res://assets/boton-salir-hover.png" type="Texture" id=10]
+[ext_resource path="res://assets/BOTONES /boton-info-hover.png" type="Texture" id=5]
+[ext_resource path="res://assets/BOTONES /boton-info.png" type="Texture" id=6]
+[ext_resource path="res://assets/BOTONES /boton-sonido-hover.png" type="Texture" id=7]
+[ext_resource path="res://assets/BOTONES /boton-sonido.png" type="Texture" id=8]
+[ext_resource path="res://assets/BOTONES /boton-salir-hover.png" type="Texture" id=9]
+[ext_resource path="res://assets/BOTONES /boton-salir.png" type="Texture" id=10]
 [ext_resource path="res://assets/diseño-tablero.png" type="Texture" id=11]
 [ext_resource path="res://assets/astronauta-1-rosa.png" type="Texture" id=12]
 [ext_resource path="res://font/FredokaOne-Regular.ttf" type="DynamicFontData" id=13]
@@ -22,10 +22,10 @@
 [ext_resource path="res://assets/SALIR/contenedor-salir.png" type="Texture" id=20]
 [ext_resource path="res://sprites/astro-ques.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/SALIR/fondo-pop ups.png" type="Texture" id=22]
-[ext_resource path="res://assets/SALIR/Boton-si-salir.png" type="Texture" id=23]
-[ext_resource path="res://assets/SALIR/Boton-no-hover.png" type="Texture" id=24]
-[ext_resource path="res://assets/SALIR/boton-si-hover.png" type="Texture" id=25]
-[ext_resource path="res://assets/SALIR/Boton-no-salir.png" type="Texture" id=26]
+[ext_resource path="res://assets/BOTONES /botones-no.png" type="Texture" id=23]
+[ext_resource path="res://assets/SALIR/CARRERA ESPACIAL_Mesa de trabajo 1 copia 4.png" type="Texture" id=24]
+[ext_resource path="res://assets/BOTONES /botones-no-hover.png" type="Texture" id=25]
+[ext_resource path="res://assets/BOTONES /botones-si-hover.png" type="Texture" id=26]
 [ext_resource path="res://sprites/astro-bandera.tscn" type="PackedScene" id=27]
 [ext_resource path="res://assets/GANASTE/texto-has ganado.png" type="Texture" id=28]
 [ext_resource path="res://assets/GANASTE/CARRERA ESPACIAL_Mesa de trabajo 1 copia 5.png" type="Texture" id=29]
@@ -35,6 +35,9 @@
 [ext_resource path="res://assets/RESPUESTA CORRECTA/Boton-ok-retroalimentacion-hover.png" type="Texture" id=33]
 [ext_resource path="res://assets/RESPUESTA CORRECTA/Web 1920 – 22.png" type="Texture" id=34]
 [ext_resource path="res://sprites/check-correcto.tscn" type="PackedScene" id=35]
+[ext_resource path="res://sprites/check-incorrecto.tscn" type="PackedScene" id=36]
+[ext_resource path="res://sprites/astro-incorrecto.tscn" type="PackedScene" id=37]
+[ext_resource path="res://assets/BOTONES /botones-si.png" type="Texture" id=38]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -65,8 +68,7 @@ font_data = ExtResource( 13 )
 scale = Vector2( 1.875, 1.875 )
 script = ExtResource( 15 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 728.0, 56.0, 132.0 ],
-"_edit_vertical_guides_": [ 630.0, 401.0 ]
+"_edit_horizontal_guides_": [ 56.0, 132.0 ]
 }
 
 [node name="Tablero" type="Sprite" parent="."]
@@ -135,6 +137,11 @@ margin_bottom = 270.0
 custom_fonts/font = SubResource( 1 )
 text = "Paulette"
 
+[node name="Diseño-tablero" type="Sprite" parent="."]
+position = Vector2( 512, 288 )
+scale = Vector2( 0.533333, 0.533334 )
+texture = ExtResource( 11 )
+
 [node name="btn-tirar" type="TextureButton" parent="."]
 margin_left = 730.0
 margin_top = 499.0
@@ -148,38 +155,32 @@ __meta__ = {
 }
 
 [node name="btn-info" type="TextureButton" parent="."]
-margin_left = 858.0
-margin_top = 30.0
-margin_right = 940.0
-margin_bottom = 106.0
+margin_left = 852.0
+margin_top = 24.0
+margin_right = 1068.0
+margin_bottom = 238.0
 grow_vertical = 0
-rect_scale = Vector2( 0.535, 0.535 )
-texture_normal = ExtResource( 5 )
-texture_hover = ExtResource( 6 )
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
 
 [node name="btn-sonido" type="TextureButton" parent="."]
-margin_left = 799.0
-margin_top = 30.0
-margin_right = 882.0
-margin_bottom = 108.0
-rect_scale = Vector2( 0.531, 0.531 )
+margin_left = 794.0
+margin_top = 23.0
+margin_right = 1010.0
+margin_bottom = 237.0
+rect_scale = Vector2( 0.25, 0.25 )
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 7 )
 
 [node name="btn-salir" type="TextureButton" parent="."]
-margin_left = 918.4
-margin_top = 27.7333
-margin_right = 989.4
-margin_bottom = 105.733
-rect_scale = Vector2( 0.6, 0.6 )
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
-
-[node name="Diseño-tablero" type="Sprite" parent="."]
-visible = false
-position = Vector2( 512, 288 )
-scale = Vector2( 0.533333, 0.533334 )
-texture = ExtResource( 11 )
+margin_left = 909.0
+margin_top = 21.0
+margin_right = 1125.0
+margin_bottom = 235.0
+rect_scale = Vector2( 0.28, 0.28 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 578.133, 550.933 )
@@ -193,47 +194,56 @@ scale = Vector2( 0.575453, 0.600856 )
 texture = ExtResource( 22 )
 
 [node name="Contenedor-advertencia" type="Sprite" parent="salir"]
-position = Vector2( 509.328, 287.467 )
-scale = Vector2( 0.615309, 0.615308 )
+position = Vector2( 499.733, 278.4 )
+scale = Vector2( 0.53697, 0.536969 )
 texture = ExtResource( 20 )
 
 [node name="alto" type="Label" parent="salir"]
-margin_left = 336.001
+margin_left = 357.334
 margin_top = 197.333
-margin_right = 421.001
-margin_bottom = 237.333
+margin_right = 455.334
+margin_bottom = 242.333
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "¡Alto!"
 
 [node name="Label" type="Label" parent="salir"]
-margin_left = 336.0
+margin_left = 357.333
 margin_top = 259.733
-margin_right = 511.0
-margin_bottom = 308.733
+margin_right = 561.333
+margin_bottom = 314.733
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "¿Seguro que quieres
  salir?"
 
+[node name="CarreraEspacialMesaDeTrabajo1Copia4" type="Sprite" parent="salir"]
+visible = false
+position = Vector2( 511.763, 288.133 )
+scale = Vector2( 0.256119, 0.256119 )
+texture = ExtResource( 24 )
+
 [node name="btn-regresar" type="TextureButton" parent="salir"]
-margin_left = 484.0
-margin_top = 334.0
-margin_right = 576.0
-margin_bottom = 388.0
-texture_normal = ExtResource( 26 )
-texture_hover = ExtResource( 24 )
-expand = true
-
-[node name="astro-ques" parent="salir" instance=ExtResource( 21 )]
-position = Vector2( 713.6, 277.333 )
-scale = Vector2( 0.500001, 0.5 )
-
-[node name="btn-salir" type="TextureButton" parent="salir"]
-margin_left = 337.0
-margin_top = 340.133
-margin_right = 440.0
-margin_bottom = 388.133
+margin_left = 499.733
+margin_top = 331.2
+margin_right = 1079.73
+margin_bottom = 611.2
+rect_scale = Vector2( 0.26, 0.26 )
 texture_normal = ExtResource( 23 )
 texture_hover = ExtResource( 25 )
+
+[node name="astro-ques" parent="salir" instance=ExtResource( 21 )]
+position = Vector2( 721.067, 278.4 )
+scale = Vector2( 0.41, 0.41 )
+
+[node name="btn-salir" type="TextureButton" parent="salir"]
+margin_left = 347.733
+margin_top = 333.333
+margin_right = 927.733
+margin_bottom = 613.333
+rect_scale = Vector2( 0.26, 0.26 )
+texture_normal = ExtResource( 38 )
+texture_hover = ExtResource( 26 )
 
 [node name="ganaste" type="Node2D" parent="."]
 visible = false
@@ -283,8 +293,10 @@ text = "Has logrado conquistar este
 gran planeta."
 
 [node name="pregunta" type="Node2D" parent="."]
+visible = false
 
 [node name="correcto" type="Node2D" parent="."]
+visible = false
 
 [node name="Hover-seleccionjugadores" type="Sprite" parent="correcto"]
 position = Vector2( 521.333, 302.933 )
@@ -306,14 +318,13 @@ texture = ExtResource( 34 )
 position = Vector2( 825.6, 317.867 )
 scale = Vector2( 0.25, 0.25 )
 
-[node name="TextureButton" type="TextureButton" parent="correcto"]
-margin_left = 401.067
-margin_top = 397.867
-margin_right = 579.067
-margin_bottom = 450.867
+[node name="btn-ok-correcto" type="TextureButton" parent="correcto"]
+margin_left = 333.333
+margin_top = 346.667
+margin_right = 667.333
+margin_bottom = 445.667
 texture_normal = ExtResource( 32 )
 texture_hover = ExtResource( 33 )
-expand = true
 
 [node name="rightwrong" type="Label" parent="correcto"]
 margin_left = 181.333
@@ -338,8 +349,55 @@ position = Vector2( 491.2, 154.133 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="incorrecto" type="Node2D" parent="."]
+visible = false
+
+[node name="Hover-seleccionjugadores" type="Sprite" parent="incorrecto"]
+position = Vector2( 521.333, 302.933 )
+scale = Vector2( 0.575453, 0.600856 )
+texture = ExtResource( 22 )
+
+[node name="Contenedor-ganaste" type="Sprite" parent="incorrecto"]
+position = Vector2( 480, 317.067 )
+scale = Vector2( 0.700684, 0.495648 )
+texture = ExtResource( 30 )
+
+[node name="TextureButton" type="TextureButton" parent="incorrecto"]
+margin_left = 401.067
+margin_top = 397.867
+margin_right = 579.067
+margin_bottom = 450.867
+texture_normal = ExtResource( 32 )
+texture_hover = ExtResource( 33 )
+expand = true
+
+[node name="rightwrong" type="Label" parent="incorrecto"]
+margin_left = 181.333
+margin_top = 236.8
+margin_right = 221.333
+margin_bottom = 265.8
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "C"
+
+[node name="text" type="Label" parent="incorrecto"]
+margin_left = 191.0
+margin_top = 288.0
+margin_right = 730.0
+margin_bottom = 371.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "E"
+
+[node name="check-incorrecto" parent="incorrecto" instance=ExtResource( 36 )]
+position = Vector2( 496, 155.2 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="astro-incorrecto" parent="incorrecto" instance=ExtResource( 37 )]
+position = Vector2( 803.733, 306.667 )
+scale = Vector2( 0.3, 0.3 )
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="salir/btn-regresar" to="." method="_on_btnregresar_pressed"]
 [connection signal="pressed" from="salir/btn-salir" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="correcto/btn-ok-correcto" to="." method="_on_btnokcorrecto_pressed"]

@@ -49,4 +49,15 @@ func _on_TextureButton_pressed():
 
 func _on_btnregresar_pressed():
 	get_node("salir").visible = false
+	
 
+
+#func _ready():
+#    play_animation_once()
+
+
+
+
+
+func _on_btnokcorrecto_pressed():
+	get_node("correcto").visible = false
