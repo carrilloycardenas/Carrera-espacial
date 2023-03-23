@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton-ok-hover.png-4001152877e0628784970dee849d978f.stex"
+path="res://.import/boton-info-hover.png-fe256f38abab3a3fdc33379c7963c3d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BOTONES /boton-ok-hover.png"
-dest_files=[ "res://.import/boton-ok-hover.png-4001152877e0628784970dee849d978f.stex" ]
+source_file="res://assets/BOTONES/boton-info-hover.png"
+dest_files=[ "res://.import/boton-info-hover.png-fe256f38abab3a3fdc33379c7963c3d5.stex" ]
 
 [params]
 

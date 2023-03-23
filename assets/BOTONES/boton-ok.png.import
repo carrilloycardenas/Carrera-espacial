@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton-salir-hover.png-41763d836cd4aa1416a3d175d98fdf9d.stex"
+path="res://.import/boton-ok.png-0f1c66ceb62712728d2f024b65971c7d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BOTONES /boton-salir-hover.png"
-dest_files=[ "res://.import/boton-salir-hover.png-41763d836cd4aa1416a3d175d98fdf9d.stex" ]
+source_file="res://assets/BOTONES/boton-ok.png"
+dest_files=[ "res://.import/boton-ok.png-0f1c66ceb62712728d2f024b65971c7d.stex" ]
 
 [params]
 

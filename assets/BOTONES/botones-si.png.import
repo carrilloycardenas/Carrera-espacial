@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton-sonido.png-60b24b44f6a0963ac4be54ac14a42301.stex"
+path="res://.import/botones-si.png-9a5de0d66543e42a62e1e36aa545adbf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BOTONES /boton-sonido.png"
-dest_files=[ "res://.import/boton-sonido.png-60b24b44f6a0963ac4be54ac14a42301.stex" ]
+source_file="res://assets/BOTONES/botones-si.png"
+dest_files=[ "res://.import/botones-si.png-9a5de0d66543e42a62e1e36aa545adbf.stex" ]
 
 [params]
 

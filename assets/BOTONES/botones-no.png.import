@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton-info.png-0cf7972cd3839c6dbc9172db15425de3.stex"
+path="res://.import/botones-no.png-8ca0ee49bd109f54f7459b35b62f1ad6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BOTONES /boton-info.png"
-dest_files=[ "res://.import/boton-info.png-0cf7972cd3839c6dbc9172db15425de3.stex" ]
+source_file="res://assets/BOTONES/botones-no.png"
+dest_files=[ "res://.import/botones-no.png-8ca0ee49bd109f54f7459b35b62f1ad6.stex" ]
 
 [params]
 
