@@ -72,6 +72,7 @@ func avanzar(dado):
 	if currPos[0] > 973 && currPos[0] < 1065 && currPos[1] > 814 && currPos[1] < 904:
 		currPos[0]-=(48.5*4)
 		currPos[1]-=(48.5*5)
+		print(48.5*4)
 	# Casilla 32
 	elif currPos[0] > 320 && currPos[0] < 414 && currPos[1] > 626 && currPos[1] < 718:
 		currPos[0]+=(48.5)
@@ -84,7 +85,7 @@ func avanzar(dado):
 	elif currPos[0] > 414 && currPos[0] < 507 && currPos[1] > 254 && currPos[1] < 347:
 		currPos[0]-=(48.5*2)
 		currPos[1]-=(48.5*2)
-	# Casilla 26
+	# Casilla 25
 	elif currPos[0] > 694 && currPos[0] < 786 && currPos[1] > 718 && currPos[1] < 811:
 		currPos[0]-=(48.5)
 		currPos[1]+=(48.5*2)
