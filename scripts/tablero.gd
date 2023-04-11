@@ -4,8 +4,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var rng = RandomNumberGenerator.new()
-#var file = (File.new())
-#var json = JSON.parse(f.get_as_text())
+var file = File.new()
 var players = [
 	{"name": "Daniel",
 	"dice": 0,
@@ -25,6 +24,8 @@ onready var astro1 = get_node("astro1")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	file.open("res://scripts/astro1.json", File.READ)
+	print(file.get_as_text())
 	for n in range(players.size()):
 		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n].name)
 	
