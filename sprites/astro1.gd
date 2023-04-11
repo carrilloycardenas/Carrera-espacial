@@ -74,31 +74,31 @@ func avanzar(dado):
 		currPos[1]-=(48.5*5)
 		print(48.5*4)
 	# Casilla 32
-	elif currPos[0] > 320 && currPos[0] < 414 && currPos[1] > 626 && currPos[1] < 718:
+	elif currPos[0] > 161 && currPos[0] < 221 && currPos[1] > 370 && currPos[1] < 430:
 		currPos[0]+=(48.5)
 		currPos[1]-=(48.5*2)
 	# Casilla 67
-	elif currPos[0] > 507 && currPos[0] < 600 && currPos[1] > 347 && currPos[1] < 440:
+	elif currPos[0] > 258 && currPos[0] < 318 && currPos[1] > 225 && currPos[1] < 285:
 		currPos[0]+=(48.5*6)
 		currPos[1]-=(48.5*3)
 	# Casilla 73
-	elif currPos[0] > 414 && currPos[0] < 507 && currPos[1] > 254 && currPos[1] < 347:
+	elif currPos[0] > 209 && currPos[0] < 269 && currPos[1] > 176 && currPos[1] < 236:
 		currPos[0]-=(48.5*2)
 		currPos[1]-=(48.5*2)
 	# Casilla 25
-	elif currPos[0] > 694 && currPos[0] < 786 && currPos[1] > 718 && currPos[1] < 811:
+	elif currPos[0] > 355 && currPos[0] < 425 && currPos[1] > 419 && currPos[1] < 479:
 		currPos[0]-=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 46
-	elif currPos[0] > 600 && currPos[0] < 692 && currPos[1] > 533 && currPos[1] < 626:
+	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 322 && currPos[1] < 382:
 		currPos[0]-=(48.5*3)
 		currPos[1]+=(48.5*3)
 	# Casilla 71
-	elif currPos[0] > 228 && currPos[0] < 321 && currPos[1] > 255 && currPos[1] < 346:
+	elif currPos[0] > 112 && currPos[0] < 172 && currPos[1] > 176 && currPos[1] < 236:
 		currPos[0]+=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 95
-	elif currPos[0] > 600 && currPos[0] < 693 && currPos[1] > 69 && currPos[1] < 162:
+	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 79 && currPos[1] < 139:
 		currPos[0]+=(48.5*2)
 		currPos[1]+=(48.5*3)
 
