@@ -69,7 +69,7 @@ func avanzar(dado):
 			currPos[0] += 48.5
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
-	if currPos[0] > 973 && currPos[0] < 1065 && currPos[1] > 814 && currPos[1] < 904:
+	if currPos[0] > 973/2 && currPos[0] < 1065/2 && currPos[1] > 814/2 && currPos[1] < 904/2:
 		currPos[0]-=(48.5*4)
 		currPos[1]-=(48.5*5)
 		print(48.5*4)
