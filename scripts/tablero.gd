@@ -5,6 +5,7 @@ extends Node
 # var b = "text"
 var rng = RandomNumberGenerator.new()
 var file = File.new()
+var player = 0
 var players = [
 	{"name": "Daniel",
 	"dice": 0,
@@ -21,6 +22,7 @@ var players = [
 	]
 	
 onready var astro1 = get_node("astro1")
+onready var astro2 = get_node("astro2")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +37,12 @@ func _on_btntirar_pressed():
 	yield(get_tree().create_timer(3.0), "timeout")
 	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
-	astro1.avanzar(dado)
+	if player == 0:
+		astro1.avanzar(dado)
+		player = 1
+	elif player == 1:
+		astro2.avanzar(dado)
+		player = 0
 
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
