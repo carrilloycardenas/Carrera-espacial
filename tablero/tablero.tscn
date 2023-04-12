@@ -70,7 +70,7 @@ font_data = ExtResource( 13 )
 scale = Vector2( 1.875, 1.875 )
 script = ExtResource( 15 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 56.0, 132.0 ]
+"_edit_horizontal_guides_": [ 56.0, 132.0, 975.0 ]
 }
 
 [node name="Tablero" type="Sprite" parent="."]
@@ -186,11 +186,11 @@ texture_normal = ExtResource( 10 )
 texture_hover = ExtResource( 9 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 571.733, 533.333 )
+position = Vector2( 571.2, 538.667 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="astro2" parent="." instance=ExtResource( 40 )]
-position = Vector2( 601.6, 512 )
+position = Vector2( 602.133, 505.6 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="salir" type="Node2D" parent="."]
