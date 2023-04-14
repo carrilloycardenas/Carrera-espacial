@@ -4,7 +4,7 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var currPos = [571.2,538.667]
+var currPos = [580.8,505.6]
 var dice = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -29,52 +29,52 @@ func avanzar(dado):
 	# Movimiento en el tablero
 	for i in range(dado):
 		yield(get_tree().create_timer(1.0), "timeout")
-		if currPos[0] > 112.5 && currPos[1] > 516 && currPos[1] < 576:
+		if currPos[0] > 172.5 && currPos[1] > 475 && currPos[1] < 535.6:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 10
-		elif currPos[0] == 142.5 && currPos[1] == 546:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 475 && currPos[1] < 535.6:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 467.5 && currPos[1] < 527.5:
+		elif currPos[0] < 541 && currPos[1] > 456 && currPos[1] < 520.5:
 			currPos[0] += 48.5
 		# Arriba - Casilla 20
-		elif currPos[0] == 579 && currPos[1] == 497.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] < 487 && currPos[1] > 427:
 			currPos[1] -= 48.5
-		elif currPos[0] > 112.5 && currPos[1] > 419 && currPos[1] < 479:
+		elif currPos[0] > 172.5 && currPos[1] > 378 && currPos[1] < 438:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 30
-		elif currPos[0] == 142.5 && currPos[1] == 449:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 378 && currPos[1] < 438:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 370.5 && currPos[1] < 430.5:
+		elif currPos[0] < 541 && currPos[1] > 330 && currPos[1] < 390:
 			currPos[0] += 48.5
 		# Arriba - Casilla 40
-		elif currPos[0] == 579 && currPos[1] == 400.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 330 && currPos[1] < 390:
 			currPos[1] -= 48.5
-		elif currPos[0] > 112.5 && currPos[1] > 322 && currPos[1] < 382:
+		elif currPos[0] > 172.5 && currPos[1] > 281 && currPos[1] < 341:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 50
-		elif currPos[0] == 142.5 && currPos[1] == 352:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 281 && currPos[1] < 341:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 273.5 && currPos[1] < 333.5:
+		elif currPos[0] < 541 && currPos[1] > 233 && currPos[1] < 293:
 			currPos[0] += 48.5
 		# Arriba - Casilla 60
-		elif currPos[0] == 579 && currPos[1] == 303.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 233 && currPos[1] < 293:
 			currPos[1] -= 48.5
-		elif currPos[0] > 112.5 && currPos[1] > 225 && currPos[1] < 285:
+		elif currPos[0] > 172.5 && currPos[1] > 184 && currPos[1] < 244:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 70
-		elif currPos[0] == 142.5 && currPos[1] == 255:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 184 && currPos[1] < 244:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 176.5 && currPos[1] < 236.5:
+		elif currPos[0] < 541 && currPos[1] > 136 && currPos[1] < 196:
 			currPos[0] += 48.5
 		# Arriba - Casilla 80
-		elif currPos[0] == 579 && currPos[1] == 206.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 136 && currPos[1] < 196:
 			currPos[1] -= 48.5
-		elif currPos[0] > 112.5 && currPos[1] > 158 && currPos[1] < 188:
+		elif currPos[0] > 172.5 && currPos[1] > 87 && currPos[1] < 147:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 90
-		elif currPos[0] == 142.5 && currPos[1] == 158:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 87 && currPos[1] < 147:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 79.5 && currPos[1] < 139.5:
+		elif currPos[0] < 541 && currPos[1] > 39 && currPos[1] < 99:
 			currPos[0] += 48.5
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19

@@ -187,7 +187,7 @@ texture_normal = ExtResource( 10 )
 texture_hover = ExtResource( 9 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 571.2, 538.667 )
+position = Vector2( 580.8, 505.6 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="astro2" parent="." instance=ExtResource( 40 )]

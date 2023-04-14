@@ -32,43 +32,52 @@ func avanzar(dado):
 	# Movimiento en el tablero
 	for i in range(dado):
 		yield(get_tree().create_timer(1.0), "timeout")
-		if currPos[0] > 142.5 && currPos[1] == 546:
+		if currPos[0] > 172.5 && currPos[1] > 504 && currPos[1] < 576:
 			currPos[0] -= 48.5
-		elif currPos[0] == 142.5 && currPos[1] == 546:
+		# Arriba - Casilla 10
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] < 576 && currPos[1] > 504:
 			currPos[1] -= 48.5
-		elif currPos[0] < 579 && currPos[1] == 497.5:
+		elif currPos[0] < 549 && currPos[1] > 467.5 && currPos[1] < 527.5:
 			currPos[0] += 48.5
-		elif currPos[0] == 579 && currPos[1] == 497.5:
+		# Arriba - Casilla 20
+		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] < 527.5 && currPos[1] > 456:
 			currPos[1] -= 48.5
-		elif currPos[0] > 142.5 && currPos[1] == 449:
+		elif currPos[0] > 172.5 && currPos[1] > 419 && currPos[1] < 479:
 			currPos[0] -= 48.5
-		elif currPos[0] == 142.5 && currPos[1] == 449:
+		# Arriba - Casilla 30
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 407 && currPos[1] < 479:
 			currPos[1] -= 48.5
-		elif currPos[0] < 579 && currPos[1] == 400.5:
+		elif currPos[0] < 549 && currPos[1] > 370.5 && currPos[1] < 430.5:
 			currPos[0] += 48.5
-		elif currPos[0] == 579 && currPos[1] == 400.5:
+		# Arriba - Casilla 40
+		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] > 359 && currPos[1] < 430.5:
 			currPos[1] -= 48.5
-		elif currPos[0] > 142.5 && currPos[1] == 352:
+		elif currPos[0] > 172.5 && currPos[1] > 322 && currPos[1] < 382:
 			currPos[0] -= 48.5
-		elif currPos[0] == 142.5 && currPos[1] == 352:
+		# Arriba - Casilla 50
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 310 && currPos[1] < 382:
 			currPos[1] -= 48.5
-		elif currPos[0] < 579 && currPos[1] == 303.5:
+		elif currPos[0] < 549 && currPos[1] > 273.5 && currPos[1] < 333.5:
 			currPos[0] += 48.5
-		elif currPos[0] == 579 && currPos[1] == 303.5:
+		# Arriba - Casilla 60
+		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] > 260.5 && currPos[1] < 333.5:
 			currPos[1] -= 48.5
-		elif currPos[0] > 142.5 && currPos[1] == 255:
+		elif currPos[0] > 172.5 && currPos[1] > 225 && currPos[1] < 285:
 			currPos[0] -= 48.5
-		elif currPos[0] == 142.5 && currPos[1] == 255:
+		# Arriba - Casilla 70
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 210 && currPos[1] < 255:
 			currPos[1] -= 48.5
-		elif currPos[0] < 579 && currPos[1] == 206.5:
+		elif currPos[0] < 549 && currPos[1] > 176.5 && currPos[1] < 236.5:
 			currPos[0] += 48.5
-		elif currPos[0] == 579 && currPos[1] == 206.5:
+		# Arriba - Casilla 80
+		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] < 206.5 && currPos[1] > 164:
 			currPos[1] -= 48.5
-		elif currPos[0] > 142.5 && currPos[1] == 158:
+		elif currPos[0] > 172.5 && currPos[1] > 158 && currPos[1] < 188:
 			currPos[0] -= 48.5
-		elif currPos[0] == 142.5 && currPos[1] == 158:
+		# Arriba - Casilla 90
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] < 158 && currPos[1] > 116:
 			currPos[1] -= 48.5
-		elif currPos[0] < 579 && currPos[1] == 109.5:
+		elif currPos[0] < 549 && currPos[1] > 79.5 && currPos[1] < 139.5:
 			currPos[0] += 48.5
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
