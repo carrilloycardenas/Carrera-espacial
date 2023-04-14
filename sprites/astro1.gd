@@ -78,36 +78,36 @@ func avanzar(dado):
 			currPos[0] += 48.5
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
-	if currPos[0] > 500 && currPos[0] < 560 && currPos[1] > 467 && currPos[1] < 527:
+	if currPos[0] > 528 && currPos[0] < 556 && currPos[1] < 487 && currPos[1] > 427:
 		currPos[0]-=(48.5*4)
 		currPos[1]-=(48.5*5)
 		print(48.5*4)
 	# Casilla 32
-	elif currPos[0] > 161 && currPos[0] < 221 && currPos[1] > 370 && currPos[1] < 430:
+	elif currPos[0] > 188 && currPos[0] < 220 && currPos[1] > 330 && currPos[1] < 390:
 		currPos[0]+=(48.5)
 		currPos[1]-=(48.5*2)
 	# Casilla 67
-	elif currPos[0] > 258 && currPos[0] < 318 && currPos[1] > 225 && currPos[1] < 285:
+	elif currPos[0] > 284 && currPos[0] < 316 && currPos[1] > 184 && currPos[1] < 244:
 		currPos[0]+=(48.5*6)
 		currPos[1]-=(48.5*3)
 	# Casilla 73
-	elif currPos[0] > 209 && currPos[0] < 269 && currPos[1] > 176 && currPos[1] < 236:
+	elif currPos[0] > 238 && currPos[0] < 266 && currPos[1] > 136 && currPos[1] < 196:
 		currPos[0]-=(48.5*2)
 		currPos[1]-=(48.5*2)
 	# Casilla 25
-	elif currPos[0] > 355 && currPos[0] < 425 && currPos[1] > 419 && currPos[1] < 479:
+	elif currPos[0] > 384 && currPos[0] < 412 && currPos[1] > 378 && currPos[1] < 438:
 		currPos[0]-=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 46
-	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 322 && currPos[1] < 382:
+	elif currPos[0] > 332 && currPos[0] < 364 && currPos[1] > 281 && currPos[1] < 341:
 		currPos[0]-=(48.5*3)
 		currPos[1]+=(48.5*3)
 	# Casilla 71
-	elif currPos[0] > 112 && currPos[0] < 172 && currPos[1] > 176 && currPos[1] < 236:
+	elif currPos[0] > 140 && currPos[0] < 168 && currPos[1] > 136 && currPos[1] < 196:
 		currPos[0]+=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 95
-	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 79 && currPos[1] < 139:
+	elif currPos[0] > 332 && currPos[0] < 364 && currPos[1] > 39 && currPos[1] < 99:
 		currPos[0]+=(48.5*2)
 		currPos[1]+=(48.5*3)
 

@@ -32,85 +32,85 @@ func avanzar(dado):
 	# Movimiento en el tablero
 	for i in range(dado):
 		yield(get_tree().create_timer(1.0), "timeout")
-		if currPos[0] > 172.5 && currPos[1] > 504 && currPos[1] < 576:
+		if currPos[0] > 172.5 && currPos[1] > 475 && currPos[1] < 535.6:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 10
-		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] < 576 && currPos[1] > 504:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 475 && currPos[1] < 535.6:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 467.5 && currPos[1] < 527.5:
+		elif currPos[0] < 541 && currPos[1] > 456 && currPos[1] < 520.5:
 			currPos[0] += 48.5
 		# Arriba - Casilla 20
-		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] < 527.5 && currPos[1] > 456:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] < 487 && currPos[1] > 427:
 			currPos[1] -= 48.5
-		elif currPos[0] > 172.5 && currPos[1] > 419 && currPos[1] < 479:
+		elif currPos[0] > 172.5 && currPos[1] > 378 && currPos[1] < 438:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 30
-		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 407 && currPos[1] < 479:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 378 && currPos[1] < 438:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 370.5 && currPos[1] < 430.5:
+		elif currPos[0] < 541 && currPos[1] > 330 && currPos[1] < 390:
 			currPos[0] += 48.5
 		# Arriba - Casilla 40
-		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] > 359 && currPos[1] < 430.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 330 && currPos[1] < 390:
 			currPos[1] -= 48.5
-		elif currPos[0] > 172.5 && currPos[1] > 322 && currPos[1] < 382:
+		elif currPos[0] > 172.5 && currPos[1] > 281 && currPos[1] < 341:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 50
-		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 310 && currPos[1] < 382:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 281 && currPos[1] < 341:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 273.5 && currPos[1] < 333.5:
+		elif currPos[0] < 541 && currPos[1] > 233 && currPos[1] < 293:
 			currPos[0] += 48.5
 		# Arriba - Casilla 60
-		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] > 260.5 && currPos[1] < 333.5:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 233 && currPos[1] < 293:
 			currPos[1] -= 48.5
-		elif currPos[0] > 172.5 && currPos[1] > 225 && currPos[1] < 285:
+		elif currPos[0] > 172.5 && currPos[1] > 184 && currPos[1] < 244:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 70
-		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 210 && currPos[1] < 255:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 184 && currPos[1] < 244:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 176.5 && currPos[1] < 236.5:
+		elif currPos[0] < 541 && currPos[1] > 136 && currPos[1] < 196:
 			currPos[0] += 48.5
 		# Arriba - Casilla 80
-		elif currPos[0] > 549 && currPos[1] < 609 && currPos[1] < 206.5 && currPos[1] > 164:
+		elif currPos[0] > 541 && currPos[0] < 601 && currPos[1] > 136 && currPos[1] < 196:
 			currPos[1] -= 48.5
-		elif currPos[0] > 172.5 && currPos[1] > 158 && currPos[1] < 188:
+		elif currPos[0] > 172.5 && currPos[1] > 87 && currPos[1] < 147:
 			currPos[0] -= 48.5
 		# Arriba - Casilla 90
-		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] < 158 && currPos[1] > 116:
+		elif currPos[0] < 172.5 && currPos[0] > 112.5 && currPos[1] > 87 && currPos[1] < 147:
 			currPos[1] -= 48.5
-		elif currPos[0] < 549 && currPos[1] > 79.5 && currPos[1] < 139.5:
+		elif currPos[0] < 541 && currPos[1] > 39 && currPos[1] < 99:
 			currPos[0] += 48.5
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
-	if currPos[0] > 500 && currPos[0] < 560 && currPos[1] > 467 && currPos[1] < 527:
+	if currPos[0] > 528 && currPos[0] < 556 && currPos[1] < 487 && currPos[1] > 427:
 		currPos[0]-=(48.5*4)
 		currPos[1]-=(48.5*5)
 		print(48.5*4)
 	# Casilla 32
-	elif currPos[0] > 161 && currPos[0] < 221 && currPos[1] > 370 && currPos[1] < 430:
+	elif currPos[0] > 188 && currPos[0] < 220 && currPos[1] > 330 && currPos[1] < 390:
 		currPos[0]+=(48.5)
 		currPos[1]-=(48.5*2)
 	# Casilla 67
-	elif currPos[0] > 258 && currPos[0] < 318 && currPos[1] > 225 && currPos[1] < 285:
+	elif currPos[0] > 284 && currPos[0] < 316 && currPos[1] > 184 && currPos[1] < 244:
 		currPos[0]+=(48.5*6)
 		currPos[1]-=(48.5*3)
 	# Casilla 73
-	elif currPos[0] > 209 && currPos[0] < 269 && currPos[1] > 176 && currPos[1] < 236:
+	elif currPos[0] > 238 && currPos[0] < 266 && currPos[1] > 136 && currPos[1] < 196:
 		currPos[0]-=(48.5*2)
 		currPos[1]-=(48.5*2)
 	# Casilla 25
-	elif currPos[0] > 355 && currPos[0] < 425 && currPos[1] > 419 && currPos[1] < 479:
+	elif currPos[0] > 384 && currPos[0] < 412 && currPos[1] > 378 && currPos[1] < 438:
 		currPos[0]-=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 46
-	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 322 && currPos[1] < 382:
+	elif currPos[0] > 332 && currPos[0] < 364 && currPos[1] > 281 && currPos[1] < 341:
 		currPos[0]-=(48.5*3)
 		currPos[1]+=(48.5*3)
 	# Casilla 71
-	elif currPos[0] > 112 && currPos[0] < 172 && currPos[1] > 176 && currPos[1] < 236:
+	elif currPos[0] > 140 && currPos[0] < 168 && currPos[1] > 136 && currPos[1] < 196:
 		currPos[0]+=(48.5)
 		currPos[1]+=(48.5*2)
 	# Casilla 95
-	elif currPos[0] > 306 && currPos[0] < 366 && currPos[1] > 79 && currPos[1] < 139:
+	elif currPos[0] > 332 && currPos[0] < 364 && currPos[1] > 39 && currPos[1] < 99:
 		currPos[0]+=(48.5*2)
 		currPos[1]+=(48.5*3)
 
