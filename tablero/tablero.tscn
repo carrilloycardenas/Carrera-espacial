@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -41,6 +41,12 @@
 [ext_resource path="res://assets/BOTONES/boton-ok.png" type="Texture" id=39]
 [ext_resource path="res://sprites/astro2.tscn" type="PackedScene" id=40]
 [ext_resource path="res://sprites/astro2.gd" type="Script" id=41]
+[ext_resource path="res://assets/PREGUNTAS/Screenshot from 2023-04-15 11-37-44.png" type="Texture" id=42]
+[ext_resource path="res://assets/PREGUNTAS/contenedor-preguntas.png" type="Texture" id=43]
+[ext_resource path="res://tablero/resGroup.tres" type="ButtonGroup" id=44]
+[ext_resource path="res://assets/PREGUNTAS/boton-aceptar-hover.png" type="Texture" id=45]
+[ext_resource path="res://tablero/pregFont.tres" type="DynamicFont" id=46]
+[ext_resource path="res://assets/PREGUNTAS/boton-aceptar.png" type="Texture" id=47]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -70,9 +76,6 @@ font_data = ExtResource( 13 )
 [node name="tablero" type="Node2D"]
 scale = Vector2( 1.875, 1.875 )
 script = ExtResource( 15 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 56.0, 132.0, 975.0 ]
-}
 
 [node name="Tablero" type="Sprite" parent="."]
 position = Vector2( 512, 288 )
@@ -305,6 +308,91 @@ gran planeta."
 [node name="pregunta" type="Node2D" parent="."]
 visible = false
 
+[node name="Hover-seleccionjugadores" type="Sprite" parent="pregunta"]
+position = Vector2( 521.333, 302.933 )
+scale = Vector2( 0.575453, 0.600856 )
+texture = ExtResource( 22 )
+
+[node name="Contenedor-preguntas" type="Sprite" parent="pregunta"]
+position = Vector2( 537.067, 307.733 )
+scale = Vector2( 0.567628, 0.567628 )
+texture = ExtResource( 43 )
+
+[node name="ScreenshotFrom2023-04-1511-37-44" type="Sprite" parent="pregunta"]
+visible = false
+position = Vector2( 522.175, 302.767 )
+scale = Vector2( 1.17431, 1.17431 )
+texture = ExtResource( 42 )
+
+[node name="btnRes1" type="CheckBox" parent="pregunta"]
+margin_left = 201.067
+margin_top = 323.733
+margin_right = 225.067
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="btnRes2" type="CheckBox" parent="pregunta"]
+margin_left = 437.333
+margin_top = 323.733
+margin_right = 461.333
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="btnRes3" type="CheckBox" parent="pregunta"]
+margin_left = 676.267
+margin_top = 323.733
+margin_right = 700.267
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="lblPreg" type="Label" parent="pregunta"]
+margin_left = 214.0
+margin_top = 221.0
+margin_right = 863.0
+margin_bottom = 289.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "¿"
+
+[node name="lblRes1" type="Label" parent="pregunta"]
+margin_left = 235.467
+margin_top = 307.333
+margin_right = 426.467
+margin_bottom = 337.333
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "1sadfasdas"
+autowrap = true
+
+[node name="lblRes2" type="Label" parent="pregunta"]
+margin_left = 475.0
+margin_top = 307.0
+margin_right = 665.0
+margin_bottom = 337.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "2as"
+autowrap = true
+
+[node name="lblRes3" type="Label" parent="pregunta"]
+margin_left = 713.0
+margin_top = 307.0
+margin_right = 896.0
+margin_bottom = 337.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "3asd"
+autowrap = true
+
+[node name="TextureButton" type="TextureButton" parent="pregunta"]
+margin_left = 439.467
+margin_top = 380.8
+margin_right = 1228.47
+margin_bottom = 694.8
+rect_scale = Vector2( 0.275, 0.275 )
+texture_normal = ExtResource( 47 )
+texture_hover = ExtResource( 45 )
+
 [node name="correcto" type="Node2D" parent="."]
 visible = false
 
@@ -406,8 +494,6 @@ scale = Vector2( 0.25, 0.25 )
 [node name="astro-incorrecto" parent="incorrecto" instance=ExtResource( 37 )]
 position = Vector2( 803.733, 306.667 )
 scale = Vector2( 0.3, 0.3 )
-
-[node name="astro3" parent="." instance=ExtResource( 19 )]
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
