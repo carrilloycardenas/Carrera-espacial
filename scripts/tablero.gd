@@ -64,10 +64,11 @@ func _on_btnregresar_pressed():
 func preg():
 	get_node("pregunta").visible = true
 	var nPreg = rng.randi_range(1,10)
-	$pregunta/lblRes1.text = preguntas.preg1.incorrecta1
-	$pregunta/lblRes2.text = preguntas.preg1.correcta
-	$pregunta/lblRes3.text = preguntas.preg1.incorrecta2
-	$pregunta/lblPreg.text = preguntas.preg1.pregunta
+	var name = preguntas.get("preg"+str(nPreg))
+	$pregunta/lblRes1.text = name.incorrecta2
+	$pregunta/lblRes2.text = name.correcta
+	$pregunta/lblRes3.text = name.incorrecta1
+	$pregunta/lblPreg.text = name.pregunta
 	
 #func _ready():
 #    play_animation_once()
