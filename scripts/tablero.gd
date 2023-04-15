@@ -4,6 +4,8 @@ extends Node
 # var a = 2
 # var b = "text"
 var rng = RandomNumberGenerator.new()
+
+
 var file = File.new()
 var player = 0
 var players = [
@@ -26,6 +28,7 @@ onready var astro2 = get_node("astro2")
 var preguntas = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rng.seed = OS.get_system_time_msecs()
 	file.open("res://scripts/quest.json", File.READ)
 	#print(file.get_as_text())
 	var json = parse_json(file.get_as_text())
