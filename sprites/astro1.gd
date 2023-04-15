@@ -110,7 +110,7 @@ func avanzar(dado):
 	elif currPos[0] > 332 && currPos[0] < 364 && currPos[1] > 39 && currPos[1] < 99:
 		currPos[0]+=(48.5*2)
 		currPos[1]+=(48.5*3)
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

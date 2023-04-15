@@ -407,6 +407,8 @@ scale = Vector2( 0.25, 0.25 )
 position = Vector2( 803.733, 306.667 )
 scale = Vector2( 0.3, 0.3 )
 
+[node name="astro3" parent="." instance=ExtResource( 19 )]
+
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="salir/btn-regresar" to="." method="_on_btnregresar_pressed"]
