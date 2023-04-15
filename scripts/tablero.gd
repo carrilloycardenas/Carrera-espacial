@@ -23,11 +23,14 @@ var players = [
 	
 onready var astro1 = get_node("astro1")
 onready var astro2 = get_node("astro2")
-
+var preguntas = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	file.open("res://scripts/astro1.json", File.READ)
-	print(file.get_as_text())
+	file.open("res://scripts/quest.json", File.READ)
+	#print(file.get_as_text())
+	var json = parse_json(file.get_as_text())
+	preguntas = json
+	#print(json.preg1.pregunta)
 	for n in range(players.size()):
 		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n].name)
 	
@@ -60,7 +63,12 @@ func _on_btnregresar_pressed():
 	
 func preg():
 	get_node("pregunta").visible = true
-
+	var nPreg = rng.randi_range(1,10)
+	$pregunta/lblRes1.text = preguntas.preg1.incorrecta1
+	$pregunta/lblRes2.text = preguntas.preg1.correcta
+	$pregunta/lblRes3.text = preguntas.preg1.incorrecta2
+	$pregunta/lblPreg.text = preguntas.preg1.pregunta
+	
 #func _ready():
 #    play_animation_once()
 

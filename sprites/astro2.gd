@@ -26,7 +26,7 @@ func _input(event):
 		#get_node("Sprite2D").look_at(self.position + Vector2(0,1))
 		
 	self.position = Vector2(currPos[0], currPos[1])
-	print(currPos)
+	#print(currPos)
 
 func avanzar(dado):
 	# Movimiento en el tablero
