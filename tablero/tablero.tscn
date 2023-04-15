@@ -194,6 +194,10 @@ position = Vector2( 602.133, 505.6 )
 scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 41 )
 
+[node name="astro1" parent="." instance=ExtResource( 19 )]
+position = Vector2( 580.8, 505.6 )
+scale = Vector2( 0.75, 0.75 )
+
 [node name="salir" type="Node2D" parent="."]
 visible = false
 
@@ -490,10 +494,6 @@ scale = Vector2( 0.25, 0.25 )
 [node name="astro-incorrecto" parent="incorrecto" instance=ExtResource( 37 )]
 position = Vector2( 803.733, 306.667 )
 scale = Vector2( 0.3, 0.3 )
-
-[node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 580.8, 505.6 )
-scale = Vector2( 0.75, 0.75 )
 
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
