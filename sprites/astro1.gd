@@ -6,7 +6,8 @@ extends KinematicBody2D
 # var b = "text"
 var currPos = [580.8,505.6]
 var dice = 0
-
+const tab = preload("res://scripts/tablero.gd")
+var tablero = tab.new()
 # Called when the node enters the scene tree for the first time.
 func _input(event):
 	if event.is_action_pressed("ui_right"):
@@ -79,6 +80,7 @@ func avanzar(dado):
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
 	if currPos[0] > 528 && currPos[0] < 556 && currPos[1] < 487 && currPos[1] > 427:
+		tablero.preg()
 		currPos[0]-=(48.5*4)
 		currPos[1]-=(48.5*5)
 		print(48.5*4)

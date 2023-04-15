@@ -58,7 +58,8 @@ func _on_TextureButton_pressed():
 func _on_btnregresar_pressed():
 	get_node("salir").visible = false
 	
-
+func preg():
+	get_node("pregunta").visible = true
 
 #func _ready():
 #    play_animation_once()
