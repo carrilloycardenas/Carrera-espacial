@@ -82,6 +82,38 @@ func preg():
 		$pregunta/lblPreg.text = name.pregunta
 		return false
 	
+func compPreg():
+	# Comprobar casilla de agujero o cohete
+	# Casilla 19
+	if currPos[player][0] > 528 && currPos[player][0] < 556 && currPos[player][1] < 487 && currPos[player][1] > 427:
+		return 19
+	# Casilla 32
+	elif currPos[player][0] > 188 && currPos[player][0] < 220 && currPos[player][1] > 330 && currPos[player][1] < 390:
+		return 32
+	# Casilla 67
+	elif currPos[player][0] > 284 && currPos[player][0] < 316 && currPos[player][1] > 184 && currPos[player][1] < 244:
+		return 67
+	# Casilla 73
+	elif currPos[player][0] > 238 && currPos[player][0] < 266 && currPos[player][1] > 136 && currPos[player][1] < 196:
+		return 73
+	# Casilla 25
+	elif currPos[player][0] > 384 && currPos[player][0] < 412 && currPos[player][1] > 378 && currPos[player][1] < 438:
+		return 25
+	# Casilla 46
+	elif currPos[player][0] > 332 && currPos[player][0] < 364 && currPos[player][1] > 281 && currPos[player][1] < 341:
+		return 46
+	# Casilla 71
+	elif currPos[player][0] > 140 && currPos[player][0] < 168 && currPos[player][1] > 136 && currPos[player][1] < 196:
+		return 71
+	# Casilla 95
+	elif currPos[player][0] > 332 && currPos[player][0] < 364 && currPos[player][1] > 39 && currPos[player][1] < 99:
+		return 95
+	#siNadaSeCumple
+	else:
+		return null
+
+
+	
 func avanzar(dado):
 	# Movimiento en el tablero
 	for i in range(dado):
@@ -135,50 +167,16 @@ func avanzar(dado):
 			currPos[player][0] += 48.5
 		$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 		$astro2.position = Vector2(currPos[1][0],currPos[1][1])
-	# Comprobar casilla de agujero o cohete
-	# Casilla 19
-	if currPos[player][0] > 528 && currPos[player][0] < 556 && currPos[player][1] < 487 && currPos[player][1] > 427:
+	
+	if compPreg() != null:
 		preg()
-		yield()
-		print('wenas')
-		if(preg()):
-			print('wenas2')
-			currPos[player][0]-=(48.5*4)
-			currPos[player][1]-=(48.5*5)
-		print(48.5*4)
-	# Casilla 32
-	elif currPos[player][0] > 188 && currPos[player][0] < 220 && currPos[player][1] > 330 && currPos[player][1] < 390:
-		currPos[player][0]+=(48.5)
-		currPos[player][1]-=(48.5*2)
-	# Casilla 67
-	elif currPos[player][0] > 284 && currPos[player][0] < 316 && currPos[player][1] > 184 && currPos[player][1] < 244:
-		currPos[player][0]+=(48.5*6)
-		currPos[player][1]-=(48.5*3)
-	# Casilla 73
-	elif currPos[player][0] > 238 && currPos[player][0] < 266 && currPos[player][1] > 136 && currPos[player][1] < 196:
-		currPos[player][0]-=(48.5*2)
-		currPos[player][1]-=(48.5*2)
-	# Casilla 25
-	elif currPos[player][0] > 384 && currPos[player][0] < 412 && currPos[player][1] > 378 && currPos[player][1] < 438:
-		currPos[player][0]-=(48.5)
-		currPos[player][1]+=(48.5*2)
-	# Casilla 46
-	elif currPos[player][0] > 332 && currPos[player][0] < 364 && currPos[player][1] > 281 && currPos[player][1] < 341:
-		currPos[player][0]-=(48.5*3)
-		currPos[player][1]+=(48.5*3)
-	# Casilla 71
-	elif currPos[player][0] > 140 && currPos[player][0] < 168 && currPos[player][1] > 136 && currPos[player][1] < 196:
-		currPos[player][0]+=(48.5)
-		currPos[player][1]+=(48.5*2)
-	# Casilla 95
-	elif currPos[player][0] > 332 && currPos[player][0] < 364 && currPos[player][1] > 39 && currPos[player][1] < 99:
-		currPos[player][0]+=(48.5*2)
-		currPos[player][1]+=(48.5*3)
+	else: 
+		if player == 0:
+			player = 1
+		elif player == 1:
+			player = 0
+	
 
-	if player == 0:
-		player = 1
-	elif player == 1:
-		player = 0
 
 
 func _on_btnokcorrecto_pressed():
@@ -193,9 +191,26 @@ func _on_btnRegRes_pressed():
 	print('holasientro')
 	print($pregunta/btnRes2.pressed)
 	if($pregunta/btnRes2.pressed):
-		ans_state = true
+		var casilla = compPreg()
+		if casilla == 19:
+			currPos[player][0]-=(48.5 * 4)
+			currPos[player][1]-=(48.5 * 5)
+		elif casilla == 32:
+			currPos[player][0]+=(48.5)
+			currPos[player][1]-=(48.5 * 2)
+		elif casilla == 67:
+			currPos[player][0]+=(48.5 * 6)
+			currPos[player][1]-=(48.5 * 3)
+		elif casilla == 73:
+			currPos[player][0]-=(48.5 * 2)
+			currPos[player][1]-=(48.5 * 2)
+		else:
+			print('Las serpientes')
+			
 	preg_state = true
 	$pregunta.visible = false
 	#print(function_save)
-	hola = true
-	_on_btntirar_pressed()
+	if player == 0:
+		player = 1
+	elif player == 1:
+		player = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://assets/BOTONES/botones-si.png" type="Texture" id=38]
 [ext_resource path="res://assets/BOTONES/boton-ok.png" type="Texture" id=39]
 [ext_resource path="res://sprites/astro2.tscn" type="PackedScene" id=40]
+[ext_resource path="res://sprites/astro2.gd" type="Script" id=41]
 [ext_resource path="res://assets/PREGUNTAS/Screenshot from 2023-04-15 11-37-44.png" type="Texture" id=42]
 [ext_resource path="res://assets/PREGUNTAS/contenedor-preguntas.png" type="Texture" id=43]
 [ext_resource path="res://tablero/resGroup.tres" type="ButtonGroup" id=44]
@@ -47,6 +48,7 @@
 [ext_resource path="res://tablero/pregFont.tres" type="DynamicFont" id=46]
 [ext_resource path="res://assets/PREGUNTAS/boton-aceptar.png" type="Texture" id=47]
 [ext_resource path="res://assets/hover-turno-jugador.png" type="Texture" id=48]
+[ext_resource path="res://sprites/astro1.gd" type="Script" id=49]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -197,11 +199,12 @@ texture_hover = ExtResource( 9 )
 [node name="astro2" parent="." instance=ExtResource( 40 )]
 position = Vector2( 602.133, 505.6 )
 scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 41 )
 
 [node name="astro1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 580.8, 505.6 )
 scale = Vector2( 0.75, 0.75 )
-script = null
+script = ExtResource( 49 )
 
 [node name="salir" type="Node2D" parent="."]
 visible = false
