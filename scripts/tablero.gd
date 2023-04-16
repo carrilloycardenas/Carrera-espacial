@@ -27,7 +27,7 @@ onready var astro1 = get_node("astro1")
 onready var astro2 = get_node("astro2")
 var preguntas = {}
 var function_save = null
-var preg_state = false
+var preg_state = true
 var ans_state = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -52,6 +52,7 @@ func _on_btntirar_pressed():
 	elif player == 1:
 		function_save = astro2.avanzar(dado)
 		player = 0
+	function_save.resume()
 	
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
