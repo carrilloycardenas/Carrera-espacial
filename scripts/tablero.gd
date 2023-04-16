@@ -69,10 +69,6 @@ func _on_btnregresar_pressed():
 	get_node("salir").visible = false
 	
 func preg():
-	if(preg_state):
-		preg_state = false
-		return ans_state
-	else:
 		get_node("pregunta").visible = true
 		var nPreg = rng.randi_range(1,10)
 		var name = preguntas.get("preg"+str(nPreg))
@@ -80,7 +76,6 @@ func preg():
 		$pregunta/lblRes2.text = name.correcta
 		$pregunta/lblRes3.text = name.incorrecta1
 		$pregunta/lblPreg.text = name.pregunta
-		return false
 	
 func compPreg():
 	# Comprobar casilla de agujero o cohete
@@ -204,10 +199,9 @@ func _on_btnRegRes_pressed():
 		elif casilla == 73:
 			currPos[player][0]-=(48.5 * 2)
 			currPos[player][1]-=(48.5 * 2)
-		else:
-			print('Las serpientes')
+	else:
+		print('Las serpientes')
 			
-	preg_state = true
 	$pregunta.visible = false
 	#print(function_save)
 	if player == 0:
