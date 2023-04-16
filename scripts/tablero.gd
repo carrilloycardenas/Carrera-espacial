@@ -47,12 +47,14 @@ func _on_btntirar_pressed():
 	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
 	if player == 0:
-		function_save = astro1.avanzar(dado)
+		var save = astro1.avanzar(dado)
+		function_save = save
 		player = 1
 	elif player == 1:
-		function_save = astro2.avanzar(dado)
+		var save = astro2.avanzar(dado)
+		function_save = save
 		player = 0
-
+	
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
 
