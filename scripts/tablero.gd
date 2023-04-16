@@ -60,15 +60,6 @@ func _on_btnsalir_pressed():
 	get_node("salir").visible = true
 
 
-func _on_TextureButton_pressed():
-	print('holasientro')
-	if($pregunta/btnRes2.pressed):
-		ans_state = true
-	preg_state = true
-	$pregunta.visible = false
-	function_save.resume()
-
-
 func _on_btnregresar_pressed():
 	get_node("salir").visible = false
 	
