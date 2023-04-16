@@ -8,6 +8,7 @@ var rng = RandomNumberGenerator.new()
 
 var file = File.new()
 var player = 0
+var hola = true
 var currPos = [[580.8,505.6],[602.133,505.6]]
 var players = [
 	{"name": "Daniel",
@@ -45,15 +46,17 @@ func _ready():
 	
 func _on_btntirar_pressed():
 	var dado = rng.randi_range(1,6)
-	get_node("Fondo-espacio-dado/spriteDado/dado").play()
-	yield(get_tree().create_timer(3.0), "timeout")
-	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
-	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
-	if player == 0:
+	if hola == false:
+		get_node("Fondo-espacio-dado/spriteDado/dado").play()
+		yield(get_tree().create_timer(3.0), "timeout")
+		get_node("Fondo-espacio-dado/spriteDado/dado").stop()
+		get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
+	if player == 0 && hola == false:
 		function_save = avanzar(dado)
-	elif player == 1:
+	elif player == 1 && hola == false:
 		function_save = avanzar(dado)
-	#function_save.resume()
+	else:
+		function_save.resume()
 	
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
