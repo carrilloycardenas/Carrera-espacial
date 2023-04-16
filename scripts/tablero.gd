@@ -185,8 +185,8 @@ func _on_btnsalirpopup_pressed():
 func _on_btnRegRes_pressed():
 	print('holasientro')
 	print($pregunta/btnRes2.pressed)
+	var casilla = compPreg()
 	if($pregunta/btnRes2.pressed):
-		var casilla = compPreg()
 		if casilla == 19:
 			currPos[player][0]-=(48.5*4)
 			currPos[player][1]-=(48.5*5)
@@ -199,8 +199,21 @@ func _on_btnRegRes_pressed():
 		elif casilla == 73:
 			currPos[player][0]-=(48.5*2)
 			currPos[player][1]-=(48.5*2)
+		$correcto.visible = true
 	else:
-		print('Las serpientes')
+		if casilla == 25:
+			currPos[player][0]-=(48.5)
+			currPos[player][1]+=(48.5*2)
+		elif casilla == 46:
+			currPos[player][0]-=(48.5*3)
+			currPos[player][1]+=(48.5*3)
+		elif casilla == 71:
+			currPos[player][0]+=(48.5)
+			currPos[player][1]+=(48.5*2)
+		elif casilla == 95:
+			currPos[player][0]+=(48.5*2)
+			currPos[player][1]+=(48.5*3)
+		$incorrecto.visible = true
 			
 	$pregunta.visible = false
 	#print(function_save)
