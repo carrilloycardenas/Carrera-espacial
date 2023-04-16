@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -47,6 +47,7 @@
 [ext_resource path="res://assets/PREGUNTAS/boton-aceptar-hover.png" type="Texture" id=45]
 [ext_resource path="res://tablero/pregFont.tres" type="DynamicFont" id=46]
 [ext_resource path="res://assets/PREGUNTAS/boton-aceptar.png" type="Texture" id=47]
+[ext_resource path="res://assets/hover-turno-jugador.png" type="Texture" id=48]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -86,6 +87,11 @@ texture = ExtResource( 1 )
 position = Vector2( 825.008, 287.5 )
 scale = Vector2( 0.533657, 0.533057 )
 texture = ExtResource( 2 )
+
+[node name="Hover-turno-jugador" type="Sprite" parent="Fondo-espacio-dado"]
+position = Vector2( -9.88397, -14.0698 )
+scale = Vector2( 0.903243, 0.90426 )
+texture = ExtResource( 48 )
 
 [node name="Astronauta-1-rosa" type="Sprite" parent="Fondo-espacio-dado"]
 position = Vector2( -110.573, -13.0417 )
@@ -249,7 +255,7 @@ texture_hover = ExtResource( 25 )
 position = Vector2( 721.067, 278.4 )
 scale = Vector2( 0.41, 0.41 )
 
-[node name="btn-salir" type="TextureButton" parent="salir"]
+[node name="btn-salir-popup" type="TextureButton" parent="salir"]
 margin_left = 347.733
 margin_top = 333.333
 margin_right = 927.733
@@ -384,7 +390,7 @@ custom_fonts/font = ExtResource( 46 )
 text = "3asd"
 autowrap = true
 
-[node name="TextureButton" type="TextureButton" parent="pregunta"]
+[node name="btnRegRes" type="TextureButton" parent="pregunta"]
 margin_left = 439.467
 margin_top = 380.8
 margin_right = 1228.47
@@ -498,5 +504,6 @@ scale = Vector2( 0.3, 0.3 )
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="salir/btn-regresar" to="." method="_on_btnregresar_pressed"]
-[connection signal="pressed" from="salir/btn-salir" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="salir/btn-salir-popup" to="." method="_on_btnsalirpopup_pressed"]
+[connection signal="pressed" from="pregunta/btnRegRes" to="." method="_on_btnRegRes_pressed"]
 [connection signal="pressed" from="correcto/btn-ok-correcto" to="." method="_on_btnokcorrecto_pressed"]

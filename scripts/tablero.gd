@@ -61,6 +61,7 @@ func _on_btnsalir_pressed():
 
 
 func _on_TextureButton_pressed():
+	print('holasientro')
 	if($pregunta/btnRes2.pressed):
 		ans_state = true
 	preg_state = true
@@ -73,6 +74,7 @@ func _on_btnregresar_pressed():
 	
 func preg():
 	if(preg_state):
+		preg_state = false
 		return ans_state
 	else:
 		get_node("pregunta").visible = true
@@ -93,3 +95,17 @@ func preg():
 
 func _on_btnokcorrecto_pressed():
 	get_node("correcto").visible = false
+
+
+func _on_btnsalirpopup_pressed():
+	get_tree().quit()
+
+
+func _on_btnRegRes_pressed():
+	print('holasientro')
+	print($pregunta/btnRes2.pressed)
+	if($pregunta/btnRes2.pressed):
+		ans_state = true
+	preg_state = true
+	$pregunta.visible = false
+	function_save.resume()
