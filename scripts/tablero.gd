@@ -188,22 +188,24 @@ func _on_btnRegRes_pressed():
 	if($pregunta/btnRes2.pressed):
 		var casilla = compPreg()
 		if casilla == 19:
-			currPos[player][0]-=(48.5 * 4)
-			currPos[player][1]-=(48.5 * 5)
+			currPos[player][0]-=(48.5*4)
+			currPos[player][1]-=(48.5*5)
 		elif casilla == 32:
 			currPos[player][0]+=(48.5)
-			currPos[player][1]-=(48.5 * 2)
+			currPos[player][1]-=(48.5*2)
 		elif casilla == 67:
-			currPos[player][0]+=(48.5 * 6)
-			currPos[player][1]-=(48.5 * 3)
+			currPos[player][0]+=(48.5*6)
+			currPos[player][1]-=(48.5*3)
 		elif casilla == 73:
-			currPos[player][0]-=(48.5 * 2)
-			currPos[player][1]-=(48.5 * 2)
+			currPos[player][0]-=(48.5*2)
+			currPos[player][1]-=(48.5*2)
 	else:
 		print('Las serpientes')
 			
 	$pregunta.visible = false
 	#print(function_save)
+	$astro1.position = Vector2(currPos[0][0],currPos[0][1])
+	$astro2.position = Vector2(currPos[1][0],currPos[1][1])
 	if player == 0:
 		player = 1
 	elif player == 1:
