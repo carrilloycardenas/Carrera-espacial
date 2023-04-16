@@ -26,6 +26,9 @@ var players = [
 onready var astro1 = get_node("astro1")
 onready var astro2 = get_node("astro2")
 var preguntas = {}
+var function_save
+var preg_state = false
+var ans_state = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.seed = OS.get_system_time_msecs()
@@ -44,10 +47,10 @@ func _on_btntirar_pressed():
 	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
 	if player == 0:
-		astro1.avanzar(dado)
+		function_save = astro1.avanzar(dado)
 		player = 1
 	elif player == 1:
-		astro2.avanzar(dado)
+		function_save = astro2.avanzar(dado)
 		player = 0
 
 func _on_CheckButton_pressed():
@@ -58,20 +61,28 @@ func _on_btnsalir_pressed():
 
 
 func _on_TextureButton_pressed():
-	get_tree().quit()
+	if($pregunta/btnRes2.pressed):
+		ans_state = true
+	preg_state = true
+	$pregunta.visible = false
+	function_save.resume()
 
 
 func _on_btnregresar_pressed():
 	get_node("salir").visible = false
 	
 func preg():
-	get_node("pregunta").visible = true
-	var nPreg = rng.randi_range(1,10)
-	var name = preguntas.get("preg"+str(nPreg))
-	$pregunta/lblRes1.text = name.incorrecta2
-	$pregunta/lblRes2.text = name.correcta
-	$pregunta/lblRes3.text = name.incorrecta1
-	$pregunta/lblPreg.text = name.pregunta
+	if(preg_state):
+		return ans_state
+	else:
+		get_node("pregunta").visible = true
+		var nPreg = rng.randi_range(1,10)
+		var name = preguntas.get("preg"+str(nPreg))
+		$pregunta/lblRes1.text = name.incorrecta2
+		$pregunta/lblRes2.text = name.correcta
+		$pregunta/lblRes3.text = name.incorrecta1
+		$pregunta/lblPreg.text = name.pregunta
+		return false
 	
 #func _ready():
 #    play_animation_once()
