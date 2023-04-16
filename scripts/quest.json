@@ -1,0 +1,62 @@
+{
+    "preg1":{
+    "pregunta": "¿Cuál es la cuarta letra del abecedario?",
+    "correcta": "D",
+    "incorrecta1": "C",
+    "incorrecta2": "E"
+    },
+    "preg2":{
+    "pregunta": "¿Para qué sirve un adjetivo?",
+    "correcta": "Describir o calificar un sustantivo",
+    "incorrecta1": "Hacer preguntas",
+    "incorrecta2": "Contar historias"
+    },
+    "preg3":{
+    "pregunta": "¿Cuántos segundos tiene una hora?",
+    "correcta": "3600",
+    "incorrecta1": "60",
+    "incorrecta2": "600"
+    },
+    "preg4":{
+    "pregunta": "¿Qué es un número primo?",
+    "correcta": "Un número que solo es divisible por 1 y por sí mismo",
+    "incorrecta1": "Un número que es divisible por cualquier otro número",
+    "incorrecta2": "Un número que siempre es positivo"
+    },
+    "preg5":{
+    "pregunta": "¿Cuántos estados tiene México?",
+    "correcta": "32",
+    "incorrecta1": "10",
+    "incorrecta2": "20"
+    },
+    "preg6":{
+    "pregunta": "¿Cuál es el estado más pequeño del mundo?",
+    "correcta": "No existe un estado que sea el más pequeño del mundo",
+    "incorrecta1": "Mónaco",
+    "incorrecta2": "San Marino"
+    },
+    "preg7":{
+    "pregunta": "¿Cuántas sílabas tiene la palabra abecedario?",
+    "correcta": "5",
+    "incorrecta1": "4",
+    "incorrecta2": "6"
+    },
+    "preg8":{
+    "pregunta": "¿Qué es un triángulo isósceles?",
+    "correcta": "Un triángulo que tiene dos lados iguales",
+    "incorrecta1": "Un triángulo que tiene tres lados diferentes",
+    "incorrecta2": "Un triángulo que tiene dos ángulos iguales"
+    },
+    "preg9":{
+    "pregunta": "¿Cuál es el río más largo del mundo? ",
+    "correcta": "El río Nilo",
+    "incorrecta1": "El río Amazonas",
+    "incorrecta2": "El río Mississippi"
+    },
+    "preg10":{
+    "pregunta": "¿A qué continente pertenece México?",
+    "correcta": "América del Norte",
+    "incorrecta1": "Asia",
+    "incorrecta2": "Europa"
+    }
+    }

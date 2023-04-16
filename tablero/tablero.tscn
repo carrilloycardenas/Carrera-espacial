@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://assets/tablero.png" type="Texture" id=1]
 [ext_resource path="res://assets/Fondo-espacio-dado.png" type="Texture" id=2]
@@ -39,6 +39,15 @@
 [ext_resource path="res://sprites/astro-incorrecto.tscn" type="PackedScene" id=37]
 [ext_resource path="res://assets/BOTONES/botones-si.png" type="Texture" id=38]
 [ext_resource path="res://assets/BOTONES/boton-ok.png" type="Texture" id=39]
+[ext_resource path="res://sprites/astro2.tscn" type="PackedScene" id=40]
+[ext_resource path="res://sprites/astro2.gd" type="Script" id=41]
+[ext_resource path="res://assets/PREGUNTAS/Screenshot from 2023-04-15 11-37-44.png" type="Texture" id=42]
+[ext_resource path="res://assets/PREGUNTAS/contenedor-preguntas.png" type="Texture" id=43]
+[ext_resource path="res://tablero/resGroup.tres" type="ButtonGroup" id=44]
+[ext_resource path="res://assets/PREGUNTAS/boton-aceptar-hover.png" type="Texture" id=45]
+[ext_resource path="res://tablero/pregFont.tres" type="DynamicFont" id=46]
+[ext_resource path="res://assets/PREGUNTAS/boton-aceptar.png" type="Texture" id=47]
+[ext_resource path="res://assets/hover-turno-jugador.png" type="Texture" id=48]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -68,9 +77,6 @@ font_data = ExtResource( 13 )
 [node name="tablero" type="Node2D"]
 scale = Vector2( 1.875, 1.875 )
 script = ExtResource( 15 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 56.0, 132.0 ]
-}
 
 [node name="Tablero" type="Sprite" parent="."]
 position = Vector2( 512, 288 )
@@ -81,6 +87,11 @@ texture = ExtResource( 1 )
 position = Vector2( 825.008, 287.5 )
 scale = Vector2( 0.533657, 0.533057 )
 texture = ExtResource( 2 )
+
+[node name="Hover-turno-jugador" type="Sprite" parent="Fondo-espacio-dado"]
+position = Vector2( -9.88397, -14.0698 )
+scale = Vector2( 0.903243, 0.90426 )
+texture = ExtResource( 48 )
 
 [node name="Astronauta-1-rosa" type="Sprite" parent="Fondo-espacio-dado"]
 position = Vector2( -110.573, -13.0417 )
@@ -184,8 +195,14 @@ rect_scale = Vector2( 0.28, 0.28 )
 texture_normal = ExtResource( 10 )
 texture_hover = ExtResource( 9 )
 
+[node name="astro2" parent="." instance=ExtResource( 40 )]
+position = Vector2( 602.133, 505.6 )
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 41 )
+
 [node name="astro1" parent="." instance=ExtResource( 19 )]
-position = Vector2( 578.133, 550.933 )
+position = Vector2( 580.8, 505.6 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="salir" type="Node2D" parent="."]
 visible = false
@@ -238,7 +255,7 @@ texture_hover = ExtResource( 25 )
 position = Vector2( 721.067, 278.4 )
 scale = Vector2( 0.41, 0.41 )
 
-[node name="btn-salir" type="TextureButton" parent="salir"]
+[node name="btn-salir-popup" type="TextureButton" parent="salir"]
 margin_left = 347.733
 margin_top = 333.333
 margin_right = 927.733
@@ -296,6 +313,91 @@ gran planeta."
 
 [node name="pregunta" type="Node2D" parent="."]
 visible = false
+
+[node name="Hover-seleccionjugadores" type="Sprite" parent="pregunta"]
+position = Vector2( 521.333, 302.933 )
+scale = Vector2( 0.575453, 0.600856 )
+texture = ExtResource( 22 )
+
+[node name="Contenedor-preguntas" type="Sprite" parent="pregunta"]
+position = Vector2( 537.067, 307.733 )
+scale = Vector2( 0.567628, 0.567628 )
+texture = ExtResource( 43 )
+
+[node name="ScreenshotFrom2023-04-1511-37-44" type="Sprite" parent="pregunta"]
+visible = false
+position = Vector2( 522.175, 302.767 )
+scale = Vector2( 1.17431, 1.17431 )
+texture = ExtResource( 42 )
+
+[node name="btnRes1" type="CheckBox" parent="pregunta"]
+margin_left = 201.067
+margin_top = 323.733
+margin_right = 225.067
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="btnRes2" type="CheckBox" parent="pregunta"]
+margin_left = 437.333
+margin_top = 323.733
+margin_right = 461.333
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="btnRes3" type="CheckBox" parent="pregunta"]
+margin_left = 676.267
+margin_top = 323.733
+margin_right = 700.267
+margin_bottom = 347.733
+group = ExtResource( 44 )
+
+[node name="lblPreg" type="Label" parent="pregunta"]
+margin_left = 214.0
+margin_top = 221.0
+margin_right = 863.0
+margin_bottom = 289.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "¿"
+
+[node name="lblRes1" type="Label" parent="pregunta"]
+margin_left = 235.467
+margin_top = 307.333
+margin_right = 426.467
+margin_bottom = 337.333
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "1sadfasdas"
+autowrap = true
+
+[node name="lblRes2" type="Label" parent="pregunta"]
+margin_left = 475.0
+margin_top = 307.0
+margin_right = 665.0
+margin_bottom = 337.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "2as"
+autowrap = true
+
+[node name="lblRes3" type="Label" parent="pregunta"]
+margin_left = 713.0
+margin_top = 307.0
+margin_right = 896.0
+margin_bottom = 337.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 46 )
+text = "3asd"
+autowrap = true
+
+[node name="btnRegRes" type="TextureButton" parent="pregunta"]
+margin_left = 439.467
+margin_top = 380.8
+margin_right = 1228.47
+margin_bottom = 694.8
+rect_scale = Vector2( 0.275, 0.275 )
+texture_normal = ExtResource( 47 )
+texture_hover = ExtResource( 45 )
 
 [node name="correcto" type="Node2D" parent="."]
 visible = false
@@ -402,5 +504,6 @@ scale = Vector2( 0.3, 0.3 )
 [connection signal="pressed" from="btn-tirar" to="." method="_on_btntirar_pressed"]
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="salir/btn-regresar" to="." method="_on_btnregresar_pressed"]
-[connection signal="pressed" from="salir/btn-salir" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="salir/btn-salir-popup" to="." method="_on_btnsalirpopup_pressed"]
+[connection signal="pressed" from="pregunta/btnRegRes" to="." method="_on_btnRegRes_pressed"]
 [connection signal="pressed" from="correcto/btn-ok-correcto" to="." method="_on_btnokcorrecto_pressed"]
