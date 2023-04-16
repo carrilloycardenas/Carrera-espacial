@@ -27,10 +27,11 @@ var players = [
 onready var astro2 = get_node("astro2")
 var preguntas = {}
 var function_save = null
-var preg_state = true
+var preg_state = false
 var ans_state = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(currPos)
 	$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 	$astro2.position = Vector2(currPos[1][0],currPos[1][1])
 	rng.seed = OS.get_system_time_msecs()
@@ -50,10 +51,8 @@ func _on_btntirar_pressed():
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
 	if player == 0:
 		function_save = avanzar(dado)
-		player = 1
 	elif player == 1:
 		function_save = avanzar(dado)
-		player = 0
 	#function_save.resume()
 	
 func _on_CheckButton_pressed():
@@ -131,6 +130,8 @@ func avanzar(dado):
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] < 541 && currPos[player][1] > 39 && currPos[player][1] < 99:
 			currPos[player][0] += 48.5
+		$astro1.position = Vector2(currPos[0][0],currPos[0][1])
+		$astro2.position = Vector2(currPos[1][0],currPos[1][1])
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
 	if currPos[player][0] > 528 && currPos[player][0] < 556 && currPos[player][1] < 487 && currPos[player][1] > 427:
@@ -170,7 +171,11 @@ func avanzar(dado):
 	elif currPos[player][0] > 332 && currPos[player][0] < 364 && currPos[player][1] > 39 && currPos[player][1] < 99:
 		currPos[player][0]+=(48.5*2)
 		currPos[player][1]+=(48.5*3)
-	pass
+
+	if player == 0:
+		player = 1
+	elif player == 1:
+		player = 0
 
 
 func _on_btnokcorrecto_pressed():
