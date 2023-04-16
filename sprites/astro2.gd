@@ -84,7 +84,9 @@ func avanzar(dado):
 	if currPos[0] > 528 && currPos[0] < 556 && currPos[1] < 487 && currPos[1] > 427:
 		get_parent().preg()
 		yield()
+		print('Buenas')
 		if(get_parent().preg()):
+			print('buenas2')
 			currPos[0]-=(48.5*4)
 			currPos[1]-=(48.5*5)
 		print(48.5*4)

@@ -26,7 +26,7 @@ var players = [
 onready var astro1 = get_node("astro1")
 onready var astro2 = get_node("astro2")
 var preguntas = {}
-var function_save
+var function_save = null
 var preg_state = false
 var ans_state = false
 # Called when the node enters the scene tree for the first time.
@@ -47,12 +47,10 @@ func _on_btntirar_pressed():
 	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
 	if player == 0:
-		var save = astro1.avanzar(dado)
-		function_save = save
+		function_save = astro1.avanzar(dado)
 		player = 1
 	elif player == 1:
-		var save = astro2.avanzar(dado)
-		function_save = save
+		function_save = astro2.avanzar(dado)
 		player = 0
 	
 func _on_CheckButton_pressed():
@@ -101,4 +99,5 @@ func _on_btnRegRes_pressed():
 		ans_state = true
 	preg_state = true
 	$pregunta.visible = false
+	print(function_save)
 	function_save.resume()
