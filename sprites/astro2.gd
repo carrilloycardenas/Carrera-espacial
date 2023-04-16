@@ -83,7 +83,7 @@ func avanzar(dado):
 	# Casilla 19
 	if currPos[0] > 528 && currPos[0] < 556 && currPos[1] < 487 && currPos[1] > 427:
 		get_parent().preg()
-		yield()
+		yield(get_tree().create_timer(5.0), "timeout")
 		print('Buenas')
 		if(get_parent().preg()):
 			print('buenas2')

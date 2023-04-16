@@ -47,12 +47,12 @@ func _on_btntirar_pressed():
 	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
 	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
 	if player == 0:
-		function_save = astro1.avanzar(dado)
+		astro1.avanzar(dado)
 		player = 1
 	elif player == 1:
-		function_save = astro2.avanzar(dado)
+		astro2.avanzar(dado)
 		player = 0
-	function_save.resume()
+	#function_save.resume()
 	
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
@@ -100,5 +100,5 @@ func _on_btnRegRes_pressed():
 		ans_state = true
 	preg_state = true
 	$pregunta.visible = false
-	print(function_save)
-	function_save.resume()
+	#print(function_save)
+	#function_save.resume()
