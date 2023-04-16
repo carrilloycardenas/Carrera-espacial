@@ -8,7 +8,7 @@ var rng = RandomNumberGenerator.new()
 
 var file = File.new()
 var player = 0
-var hola = true
+var hola = false
 var currPos = [[580.8,505.6],[602.133,505.6]]
 var players = [
 	{"name": "Daniel",
@@ -197,4 +197,5 @@ func _on_btnRegRes_pressed():
 	preg_state = true
 	$pregunta.visible = false
 	#print(function_save)
-	function_save.resume()
+	hola = true
+	_on_btntirar_pressed()
