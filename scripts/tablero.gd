@@ -56,7 +56,12 @@ func preg():
 		$pregunta/lblRes2.text = name.correcta
 		$pregunta/lblRes3.text = name.incorrecta1
 		$pregunta/lblPreg.text = name.pregunta
-	
+		if player == 1:
+			var n_ans = rng.randi_range(1,3)
+			get_node("pregunta/btnRes"+str(n_ans)).pressed = true
+			_on_btnRegRes_pressed()
+			
+			
 func compPreg():
 	# Comprobar casilla de agujero o cohete
 	# Casilla 19
@@ -149,10 +154,13 @@ func avanzar(dado):
 		if player == 0:
 			get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = false
 			get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = true
+			$pregunta/btnRegRes.disabled = true
 			player = 1
+			_on_btntirar_pressed()
 		elif player == 1:
 			get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
 			get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
+			$pregunta/btnRegRes.disabled = false
 			player = 0
 	
 
@@ -208,8 +216,12 @@ func _on_btnRegRes_pressed():
 	if player == 0:
 		get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = false
 		get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = true
+		$pregunta/btnRegRes.disabled = true
+		player = 1
+		_on_btntirar_pressed()
 		player = 1
 	elif player == 1:
 		get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
 		get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
+		$pregunta/btnRegRes.disabled = false
 		player = 0
