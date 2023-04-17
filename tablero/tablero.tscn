@@ -287,6 +287,15 @@ custom_fonts/font = SubResource( 4 )
 text = "Has logrado conquistar este 
 gran planeta."
 
+[node name="btn-salir-ganaste" type="TextureButton" parent="ganaste"]
+margin_left = 411.733
+margin_top = 311.467
+margin_right = 529.733
+margin_bottom = 428.467
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+expand = true
+
 [node name="pregunta" type="Node2D" parent="."]
 visible = false
 
@@ -483,6 +492,7 @@ scale = Vector2( 0.3, 0.3 )
 [connection signal="pressed" from="btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="salir/btn-regresar" to="." method="_on_btnregresar_pressed"]
 [connection signal="pressed" from="salir/btn-salir-popup" to="." method="_on_btnsalirpopup_pressed"]
+[connection signal="pressed" from="ganaste/btn-salir-ganaste" to="." method="_on_btnsalirganaste_pressed"]
 [connection signal="pressed" from="pregunta/btnRegRes" to="." method="_on_btnRegRes_pressed"]
 [connection signal="pressed" from="correcto/btn-ok-correcto" to="." method="_on_btnokcorrecto_pressed"]
 [connection signal="pressed" from="incorrecto/btn-ok-incorrecto" to="." method="_on_btnokincorrecto_pressed"]

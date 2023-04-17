@@ -180,6 +180,9 @@ func _on_btnsalirpopup_pressed():
 
 func _on_btnokincorrecto_pressed():
 	get_node("incorrecto").visible = false
+	
+func _on_btnsalirganaste_pressed():
+	get_tree().change_scene("res://menus/inicio.tscn")
 
 func _on_btnRegRes_pressed():
 	print('holasientro')
