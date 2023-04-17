@@ -14,6 +14,10 @@ config/name="Carrera-espacial"
 run/main_scene="res://menus/inicio.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Nombre="*res://scripts/nombre.gd"
+
 [display]
 
 window/size/width=1920
