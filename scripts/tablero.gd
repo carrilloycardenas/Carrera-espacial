@@ -59,6 +59,7 @@ func preg():
 		if player == 1:
 			var n_ans = rng.randi_range(1,3)
 			get_node("pregunta/btnRes"+str(n_ans)).pressed = true
+			yield(get_tree().create_timer(3.0), "timeout")
 			_on_btnRegRes_pressed()
 			
 			
@@ -145,6 +146,8 @@ func avanzar(dado):
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] < 561 && currPos[player][1] > 39 && currPos[player][1] < 99:
 			currPos[player][0] += 48.5
+		elif currPos[player][0] > 561 && currPos[player][1] > 39 && currPos[player][1] < 99:
+			$ganaste.visible = true
 		$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 		$astro2.position = Vector2(currPos[1][0],currPos[1][1])
 	
