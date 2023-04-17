@@ -28,6 +28,10 @@ func _ready():
 	get_node("Fondo-espacio-dado/lbl-player1").text = player_name
 	
 func _on_btntirar_pressed():
+	if player == 1:
+		get_node("btn-tirar").disabled = true
+	else:
+		get_node("btn-tirar").disabled = false
 	var dado = rng.randi_range(1,6)
 	get_node("Fondo-espacio-dado/spriteDado/dado").play()
 	yield(get_tree().create_timer(3.0), "timeout")
@@ -222,7 +226,6 @@ func _on_btnRegRes_pressed():
 		$pregunta/btnRegRes.disabled = true
 		player = 1
 		_on_btntirar_pressed()
-		player = 1
 	elif player == 1:
 		get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
 		get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
