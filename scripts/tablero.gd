@@ -10,10 +10,12 @@ var file = File.new()
 var player = 0
 var currPos = [[580.8,505.6],[602.133,505.6]]
 var player_name = 'Hola'
-
+const varnombre = preload("res://scripts/numJuga.gd")
+var nombre = varnombre.new()
 var preguntas = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player_name = nombre.nombre
 	get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
 	get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
 	print(currPos)
