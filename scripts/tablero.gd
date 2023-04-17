@@ -168,6 +168,7 @@ func avanzar(dado):
 			get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
 			get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
 			$pregunta/btnRegRes.disabled = false
+			get_node("btn-tirar").disabled = false
 			player = 0
 	
 
