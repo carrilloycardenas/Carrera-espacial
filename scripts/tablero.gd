@@ -199,6 +199,8 @@ func _on_btnRegRes_pressed():
 			currPos[player][0]-=(48.5*2)
 			currPos[player][1]-=(48.5*2)
 		$correcto.visible = true
+		yield(get_tree().create_timer(3.0), "timeout")
+		$correcto.visible = false
 	else:
 		if casilla == 25:
 			currPos[player][0]-=(48.5)
@@ -213,6 +215,8 @@ func _on_btnRegRes_pressed():
 			currPos[player][0]+=(48.5*2)
 			currPos[player][1]+=(48.5*3)
 		$incorrecto.visible = true
+		yield(get_tree().create_timer(3.0), "timeout")
+		$incorrecto.visible = false
 			
 	$pregunta.visible = false
 	#print(function_save)
