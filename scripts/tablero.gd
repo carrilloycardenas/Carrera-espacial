@@ -8,30 +8,14 @@ var rng = RandomNumberGenerator.new()
 
 var file = File.new()
 var player = 0
-var hola = false
 var currPos = [[580.8,505.6],[602.133,505.6]]
-var players = [
-	{"name": "Daniel",
-	"dice": 0,
-	"position": [579,546]},
-	{"name": "Carrillo",
-	"dice": 0,
-	"position": [579,546]},
-	{"name": "Elizabeth",
-	"dice": 0,
-	"position": [579,546]},
-	{"name": "Elvira",
-	"dice": 0,
-	"position": [579,546]}
-	]
-	
-onready var astro2 = get_node("astro2")
+var player_name = 'Hola'
+
 var preguntas = {}
-var function_save = null
-var preg_state = false
-var ans_state = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
+	get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
 	print(currPos)
 	$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 	$astro2.position = Vector2(currPos[1][0],currPos[1][1])
@@ -41,22 +25,18 @@ func _ready():
 	var json = parse_json(file.get_as_text())
 	preguntas = json
 	#print(json.preg1.pregunta)
-	for n in range(players.size()):
-		get_node("Fondo-espacio-dado/lbl-player"+str(n+1)).text = str(players[n].name)
+	get_node("Fondo-espacio-dado/lbl-player1").text = player_name
 	
 func _on_btntirar_pressed():
 	var dado = rng.randi_range(1,6)
-	if hola == false:
-		get_node("Fondo-espacio-dado/spriteDado/dado").play()
-		yield(get_tree().create_timer(3.0), "timeout")
-		get_node("Fondo-espacio-dado/spriteDado/dado").stop()
-		get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
-	if player == 0 && hola == false:
-		function_save = avanzar(dado)
-	elif player == 1 && hola == false:
-		function_save = avanzar(dado)
-	else:
-		function_save.resume()
+	get_node("Fondo-espacio-dado/spriteDado/dado").play()
+	yield(get_tree().create_timer(3.0), "timeout")
+	get_node("Fondo-espacio-dado/spriteDado/dado").stop()
+	get_node("Fondo-espacio-dado/spriteDado/dado").frame = (dado-1)
+	if player == 0:
+		avanzar(dado)
+	elif player == 1:
+		avanzar(dado)
 	
 func _on_CheckButton_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
@@ -167,8 +147,12 @@ func avanzar(dado):
 		preg()
 	else: 
 		if player == 0:
+			get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = false
+			get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = true
 			player = 1
 		elif player == 1:
+			get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
+			get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
 			player = 0
 	
 
@@ -220,6 +204,10 @@ func _on_btnRegRes_pressed():
 	$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 	$astro2.position = Vector2(currPos[1][0],currPos[1][1])
 	if player == 0:
+		get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = false
+		get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = true
 		player = 1
 	elif player == 1:
+		get_node("Fondo-espacio-dado/Hover-turno-jugador1").visible = true
+		get_node("Fondo-espacio-dado/Hover-turno-jugador2").visible = false
 		player = 0
