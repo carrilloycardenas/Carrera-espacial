@@ -29,8 +29,7 @@
 [ext_resource path="res://assets/GANASTE/CARRERA ESPACIAL_Mesa de trabajo 1 copia 5.png" type="Texture" id=29]
 [ext_resource path="res://assets/GANASTE/contenedor-ganaste.png" type="Texture" id=30]
 [ext_resource path="res://sprites/astro-correcto.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/RESPUESTA CORRECTA/Boton-ok-retroalimentacion.png" type="Texture" id=32]
-[ext_resource path="res://assets/RESPUESTA CORRECTA/Boton-ok-retroalimentacion-hover.png" type="Texture" id=33]
+[ext_resource path="res://assets/BOTONES/boton-ok-hover.png" type="Texture" id=32]
 [ext_resource path="res://assets/RESPUESTA CORRECTA/Web 1920 – 22.png" type="Texture" id=34]
 [ext_resource path="res://sprites/check-correcto.tscn" type="PackedScene" id=35]
 [ext_resource path="res://sprites/check-incorrecto.tscn" type="PackedScene" id=36]
@@ -406,7 +405,7 @@ margin_right = 1216.8
 margin_bottom = 701.4
 rect_scale = Vector2( 0.26, 0.26 )
 texture_normal = ExtResource( 39 )
-texture_hover = ExtResource( 9 )
+texture_hover = ExtResource( 32 )
 
 [node name="rightwrong" type="Label" parent="correcto"]
 margin_left = 181.333
@@ -415,23 +414,23 @@ margin_right = 221.333
 margin_bottom = 265.8
 custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "C"
+text = "¡CORRECTO!"
 
 [node name="text" type="Label" parent="correcto"]
 margin_left = 191.0
 margin_top = 288.0
-margin_right = 730.0
+margin_right = 675.0
 margin_bottom = 371.0
 custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
 custom_fonts/font = SubResource( 6 )
-text = "E"
+text = "Enhorabuena, has acertado correctamente al pregunta."
+autowrap = true
 
 [node name="check-correcto" parent="correcto" instance=ExtResource( 35 )]
 position = Vector2( 491.2, 154.133 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="incorrecto" type="Node2D" parent="."]
-visible = false
 
 [node name="Hover-seleccionjugadores" type="Sprite" parent="incorrecto"]
 position = Vector2( 521.333, 302.933 )
@@ -443,14 +442,14 @@ position = Vector2( 480, 317.067 )
 scale = Vector2( 0.700684, 0.495648 )
 texture = ExtResource( 30 )
 
-[node name="TextureButton" type="TextureButton" parent="incorrecto"]
-margin_left = 401.067
-margin_top = 397.867
-margin_right = 579.067
-margin_bottom = 450.867
-texture_normal = ExtResource( 32 )
-texture_hover = ExtResource( 33 )
-expand = true
+[node name="btn-ok-incorrecto" type="TextureButton" parent="incorrecto"]
+margin_left = 387.733
+margin_top = 389.333
+margin_right = 1223.73
+margin_bottom = 708.333
+rect_scale = Vector2( 0.26, 0.26 )
+texture_normal = ExtResource( 39 )
+texture_hover = ExtResource( 32 )
 
 [node name="rightwrong" type="Label" parent="incorrecto"]
 margin_left = 181.333
@@ -458,17 +457,18 @@ margin_top = 236.8
 margin_right = 221.333
 margin_bottom = 265.8
 custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "C"
+custom_fonts/font = ExtResource( 46 )
+text = "¡Incorrecto!"
 
-[node name="text" type="Label" parent="incorrecto"]
+[node name="lblTxtIncorrecto" type="Label" parent="incorrecto"]
 margin_left = 191.0
 margin_top = 288.0
-margin_right = 730.0
+margin_right = 667.0
 margin_bottom = 371.0
 custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = ExtResource( 46 )
 text = "E"
+autowrap = true
 
 [node name="check-incorrecto" parent="incorrecto" instance=ExtResource( 36 )]
 position = Vector2( 496, 155.2 )
@@ -484,3 +484,4 @@ scale = Vector2( 0.3, 0.3 )
 [connection signal="pressed" from="salir/btn-salir-popup" to="." method="_on_btnsalirpopup_pressed"]
 [connection signal="pressed" from="pregunta/btnRegRes" to="." method="_on_btnRegRes_pressed"]
 [connection signal="pressed" from="correcto/btn-ok-correcto" to="." method="_on_btnokcorrecto_pressed"]
+[connection signal="pressed" from="incorrecto/btn-ok-incorrecto" to="." method="_on_btnokincorrecto_pressed"]

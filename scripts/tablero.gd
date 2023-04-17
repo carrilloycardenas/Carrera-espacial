@@ -165,6 +165,8 @@ func _on_btnokcorrecto_pressed():
 func _on_btnsalirpopup_pressed():
 	get_tree().quit()
 
+func _on_btnokincorrecto_pressed():
+	get_node("incorrecto").visible = false
 
 func _on_btnRegRes_pressed():
 	print('holasientro')
