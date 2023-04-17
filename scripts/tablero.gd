@@ -98,47 +98,47 @@ func avanzar(dado):
 		# Arriba - Casilla 10
 		elif currPos[player][0] < 172.5 && currPos[player][0] > 112.5 && currPos[player][1] > 475 && currPos[player][1] < 535.6:
 			currPos[player][1] -= 48.5
-		elif currPos[player][0] < 541 && currPos[player][1] > 456 && currPos[player][1] < 520.5:
+		elif currPos[player][0] < 561 && currPos[player][1] > 452 && currPos[player][1] < 520.5:
 			currPos[player][0] += 48.5
 		# Arriba - Casilla 20
-		elif currPos[player][0] > 541 && currPos[player][0] < 601 && currPos[player][1] < 487 && currPos[player][1] > 427:
+		elif currPos[player][0] > 561 && currPos[player][0] < 603 && currPos[player][1] < 487 && currPos[player][1] > 427:
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] > 172.5 && currPos[player][1] > 378 && currPos[player][1] < 438:
 			currPos[player][0] -= 48.5
 		# Arriba - Casilla 30
 		elif currPos[player][0] < 172.5 && currPos[player][0] > 112.5 && currPos[player][1] > 378 && currPos[player][1] < 438:
 			currPos[player][1] -= 48.5
-		elif currPos[player][0] < 541 && currPos[player][1] > 330 && currPos[player][1] < 390:
+		elif currPos[player][0] < 561 && currPos[player][1] > 330 && currPos[player][1] < 390:
 			currPos[player][0] += 48.5
 		# Arriba - Casilla 40
-		elif currPos[player][0] > 541 && currPos[player][0] < 601 && currPos[player][1] > 330 && currPos[player][1] < 390:
+		elif currPos[player][0] > 561 && currPos[player][0] < 603 && currPos[player][1] > 330 && currPos[player][1] < 390:
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] > 172.5 && currPos[player][1] > 281 && currPos[player][1] < 341:
 			currPos[player][0] -= 48.5
 		# Arriba - Casilla 50
 		elif currPos[player][0] < 172.5 && currPos[player][0] > 112.5 && currPos[player][1] > 281 && currPos[player][1] < 341:
 			currPos[player][1] -= 48.5
-		elif currPos[player][0] < 541 && currPos[player][1] > 233 && currPos[player][1] < 293:
+		elif currPos[player][0] < 561 && currPos[player][1] > 233 && currPos[player][1] < 293:
 			currPos[player][0] += 48.5
 		# Arriba - Casilla 60
-		elif currPos[player][0] > 541 && currPos[player][0] < 601 && currPos[player][1] > 233 && currPos[player][1] < 293:
+		elif currPos[player][0] > 561 && currPos[player][0] < 603 && currPos[player][1] > 233 && currPos[player][1] < 293:
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] > 172.5 && currPos[player][1] > 184 && currPos[player][1] < 244:
 			currPos[player][0] -= 48.5
 		# Arriba - Casilla 70
 		elif currPos[player][0] < 172.5 && currPos[player][0] > 112.5 && currPos[player][1] > 184 && currPos[player][1] < 244:
 			currPos[player][1] -= 48.5
-		elif currPos[player][0] < 541 && currPos[player][1] > 136 && currPos[player][1] < 196:
+		elif currPos[player][0] < 561 && currPos[player][1] > 136 && currPos[player][1] < 196:
 			currPos[player][0] += 48.5
 		# Arriba - Casilla 80
-		elif currPos[player][0] > 541 && currPos[player][0] < 601 && currPos[player][1] > 136 && currPos[player][1] < 196:
+		elif currPos[player][0] > 561 && currPos[player][0] < 603 && currPos[player][1] > 136 && currPos[player][1] < 196:
 			currPos[player][1] -= 48.5
 		elif currPos[player][0] > 172.5 && currPos[player][1] > 87 && currPos[player][1] < 147:
 			currPos[player][0] -= 48.5
 		# Arriba - Casilla 90
 		elif currPos[player][0] < 172.5 && currPos[player][0] > 112.5 && currPos[player][1] > 87 && currPos[player][1] < 147:
 			currPos[player][1] -= 48.5
-		elif currPos[player][0] < 541 && currPos[player][1] > 39 && currPos[player][1] < 99:
+		elif currPos[player][0] < 561 && currPos[player][1] > 39 && currPos[player][1] < 99:
 			currPos[player][0] += 48.5
 		$astro1.position = Vector2(currPos[0][0],currPos[0][1])
 		$astro2.position = Vector2(currPos[1][0],currPos[1][1])
