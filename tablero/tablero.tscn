@@ -86,8 +86,8 @@ scale = Vector2( 0.533657, 0.533057 )
 texture = ExtResource( 2 )
 
 [node name="Hover-turno-jugador1" type="Sprite" parent="Fondo-espacio-dado"]
-position = Vector2( 0.810616, -14.0698 )
-scale = Vector2( 0.963422, 0.90426 )
+position = Vector2( 8.30601, -14.0698 )
+scale = Vector2( 1.01529, 0.90426 )
 texture = ExtResource( 48 )
 
 [node name="Hover-turno-jugador2" type="Sprite" parent="Fondo-espacio-dado"]
@@ -110,9 +110,9 @@ position = Vector2( 7.48047, -173.527 )
 scale = Vector2( 0.35, 0.35 )
 
 [node name="lbl-player1" type="Label" parent="Fondo-espacio-dado"]
-margin_left = -50.0006
+margin_left = -71.0
 margin_top = -38.0
-margin_right = 187.999
+margin_right = 137.0
 margin_bottom = 8.0
 custom_fonts/font = SubResource( 1 )
 text = "Mariana"

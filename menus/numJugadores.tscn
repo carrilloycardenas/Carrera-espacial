@@ -139,6 +139,70 @@ rect_scale = Vector2( 1.2, 1.2 )
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 
+[node name="txtNombre" type="LineEdit" parent="."]
+margin_left = 249.096
+margin_top = 679.114
+margin_right = 469.195
+margin_bottom = 719.114
+rect_scale = Vector2( 0.991935, 1 )
+custom_fonts/font = ExtResource( 28 )
+align = 1
+max_length = 9
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+placeholder_text = "Tu nombre"
+placeholder_alpha = 0.424
+
+[node name="incorrecto" type="Node2D" parent="."]
+visible = false
+scale = Vector2( 1.745, 1.649 )
+
+[node name="Hover-seleccionjugadores" type="Sprite" parent="incorrecto"]
+position = Vector2( 550.133, 327.467 )
+scale = Vector2( 0.575453, 0.600856 )
+texture = ExtResource( 19 )
+
+[node name="Contenedor-ganaste" type="Sprite" parent="incorrecto"]
+position = Vector2( 508.8, 341.6 )
+scale = Vector2( 0.700684, 0.495648 )
+texture = ExtResource( 29 )
+
+[node name="btn-ok-incorrecto" type="TextureButton" parent="incorrecto"]
+margin_left = 416.533
+margin_top = 413.867
+margin_right = 1252.53
+margin_bottom = 732.867
+rect_scale = Vector2( 0.26, 0.26 )
+texture_normal = ExtResource( 27 )
+texture_hover = ExtResource( 23 )
+
+[node name="rightwrong" type="Label" parent="incorrecto"]
+margin_left = 210.133
+margin_top = 275.888
+margin_right = 342.133
+margin_bottom = 305.888
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 30 )
+text = "¡Error!"
+
+[node name="lblTxtIncorrecto" type="Label" parent="incorrecto"]
+margin_left = 220.0
+margin_top = 327.0
+margin_right = 713.0
+margin_bottom = 410.0
+custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
+custom_fonts/font = ExtResource( 30 )
+text = "¡¡Introduce solo letras o numeros!!"
+autowrap = true
+
+[node name="check-incorrecto" parent="incorrecto" instance=ExtResource( 26 )]
+position = Vector2( 524.8, 179.734 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="astro-incorrecto" parent="incorrecto" instance=ExtResource( 31 )]
+position = Vector2( 832.533, 331.201 )
+scale = Vector2( 0.3, 0.3 )
+
 [node name="Hover-seleccionjugadores" type="Sprite" parent="."]
 visible = false
 position = Vector2( 983, 505 )
@@ -201,72 +265,8 @@ expand = true
 position = Vector2( 118.139, 5.35709 )
 scale = Vector2( 0.328164, 0.765298 )
 
-[node name="txtNombre" type="LineEdit" parent="."]
-margin_left = 249.096
-margin_top = 679.114
-margin_right = 469.195
-margin_bottom = 719.114
-rect_scale = Vector2( 0.991935, 1 )
-custom_fonts/font = ExtResource( 28 )
-align = 1
-max_length = 25
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-placeholder_text = "Tu nombre"
-placeholder_alpha = 0.424
-
-[node name="incorrecto" type="Node2D" parent="."]
-visible = false
-scale = Vector2( 1.745, 1.649 )
-
-[node name="Hover-seleccionjugadores" type="Sprite" parent="incorrecto"]
-position = Vector2( 550.133, 327.467 )
-scale = Vector2( 0.575453, 0.600856 )
-texture = ExtResource( 19 )
-
-[node name="Contenedor-ganaste" type="Sprite" parent="incorrecto"]
-position = Vector2( 508.8, 341.6 )
-scale = Vector2( 0.700684, 0.495648 )
-texture = ExtResource( 29 )
-
-[node name="btn-ok-incorrecto" type="TextureButton" parent="incorrecto"]
-margin_left = 416.533
-margin_top = 413.867
-margin_right = 1252.53
-margin_bottom = 732.867
-rect_scale = Vector2( 0.26, 0.26 )
-texture_normal = ExtResource( 27 )
-texture_hover = ExtResource( 23 )
-
-[node name="rightwrong" type="Label" parent="incorrecto"]
-margin_left = 210.133
-margin_top = 275.888
-margin_right = 342.133
-margin_bottom = 305.888
-custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
-custom_fonts/font = ExtResource( 30 )
-text = "¡Error!"
-
-[node name="lblTxtIncorrecto" type="Label" parent="incorrecto"]
-margin_left = 220.0
-margin_top = 327.0
-margin_right = 713.0
-margin_bottom = 410.0
-custom_colors/font_color = Color( 0.215686, 0.101961, 0.270588, 1 )
-custom_fonts/font = ExtResource( 30 )
-text = "¡¡Introduce solo letras o numeros!!"
-autowrap = true
-
-[node name="check-incorrecto" parent="incorrecto" instance=ExtResource( 26 )]
-position = Vector2( 524.8, 179.734 )
-scale = Vector2( 0.25, 0.25 )
-
-[node name="astro-incorrecto" parent="incorrecto" instance=ExtResource( 31 )]
-position = Vector2( 832.533, 331.201 )
-scale = Vector2( 0.3, 0.3 )
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="1Jugador" to="." method="_on_1Jugador_pressed"]
 [connection signal="pressed" from="btn-popupSalir" to="." method="_on_btnpopupSalir_pressed"]
-[connection signal="pressed" from="Hover-seleccionjugadores/btn-salir" to="." method="_on_btnsalir_pressed"]
 [connection signal="pressed" from="incorrecto/btn-ok-incorrecto" to="." method="_on_btnokincorrecto_pressed"]
+[connection signal="pressed" from="Hover-seleccionjugadores/btn-salir" to="." method="_on_btnsalir_pressed"]

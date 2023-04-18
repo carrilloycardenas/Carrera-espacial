@@ -185,8 +185,6 @@ func _on_btnsalirganaste_pressed():
 	get_tree().change_scene("res://menus/inicio.tscn")
 
 func _on_btnRegRes_pressed():
-	print('holasientro')
-	print($pregunta/btnRes2.pressed)
 	var casilla = compPreg()
 	if($pregunta/btnRes2.pressed):
 		if casilla == 19:
@@ -198,6 +196,7 @@ func _on_btnRegRes_pressed():
 		elif casilla == 67:
 			currPos[player][0]+=(48.5*6)
 			currPos[player][1]-=(48.5*3)
+			get_node("ganaste").visible = true
 		elif casilla == 73:
 			currPos[player][0]-=(48.5*2)
 			currPos[player][1]-=(48.5*2)
